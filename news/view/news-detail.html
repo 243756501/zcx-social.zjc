@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css" />
+		<link rel="stylesheet" type="text/css" href="../css/news-detail.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/previewimage.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<i class="mui-icon-extra mui-icon-extra-share mui-pull-right"></i>
+		</header>
+		<div class="news-detail-body mui-fullscreen">
+			<div id="loading_page" class="base-loading">
+				<i class="mui-spinner"></i>
+			</div>
+			<div id="main_page" class="mui-scroll-wrapper mui-fullscreen" style="display: none;">
+				<div class="mui-scroll">
+					<div id="newsInfo" class="news-detail-info-body">
+					</div>
+					<div class="news-detail-bottom">
+						<ul id="newsComment_ul" class="mui-table-view mui-clearfix">
+							<!--<li class="news-comment-li mui-table-view-cell">
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script id="newsComment_script" type="text/html">
+			<img class="news-comment-avatar" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}" onload="load(this)"/>
+			<div class="news-comment-detail">
+				<div class="news-comment-user">
+					<span class="news-comment-username">{{user.nickname}}</span>
+					<span>{{create_time}}</span>
+				</div>
+				<div>
+					<span>{{content}}</span>
+				</div>
+			</div>
+		</script>
+		<script id="newsDetail_script" type="text/html">
+			<div class="news-detail-top">
+				<img class="news-detail-img" src="../../ucenter/img/ucenter-top-bkimg.jpg" data-src="{{cover_url.banana}}" onload="load(this)" />
+			</div>
+			<div class="news-detail-middle">
+				<div class="news-detail-author">
+					<div class="news-detail-author-info">
+						<img class="news-detail-avatar" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}" onload="load(this)"/>
+						<span class="news-detail-authorname">{{user.nickname}}</span>
+					</div>
+					<span class="news-detail-time">{{update_time}}</span>
+				</div>
+				<div class="news-detail-newsbody">
+					<div class="news-detail-title">
+						{{title}}
+					</div>
+					<div id="newsContent" class="news-detail-content">
+					</div>
+				</div>
+			</div>
+		</script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/news.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgtools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/news-detail.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

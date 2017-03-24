@@ -1,0 +1,58 @@
+.mui-slider-indicator .mui-indicator
+{
+	height: 10px !important;
+	width: 10px !important;
+}
+.welcome span
+{
+	font-size: 25px;
+}
+
+.first-word span:nth-child(1)
+{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+}
+
+.first-word span:nth-child(2)
+{
+	position: absolute;
+	top: 20%;
+	left: 60%;
+}
+
+.first-word span:nth-child(3)
+{
+	position: absolute;
+	top: 30%;
+	left: 40%;
+}
+.sencond-word span:nth-child(1)
+{
+	position: absolute;
+	bottom: 15%;
+	left: 20%;
+}
+.sencond-word span:nth-child(2)
+{
+	position: absolute;
+	bottom: 25%;
+	right: 30%;
+}
+
+.third-word span:nth-child(1)
+{
+	position: absolute;
+	top: 10%;
+    left: 30%;
+}
+
+.third-word button
+{
+	position: absolute;
+	bottom: 10%;
+    left: 30%;
+    width: 40%;
+    height: 50px;
+}

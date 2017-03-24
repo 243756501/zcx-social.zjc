@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/ucenter-main.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<h1 class="mui-title">个人中心</h1>
+		</header>
+		<div id="unloginBody" class="unlogin-body mui-fullscreen">
+			<div class="unlogin-img-div">
+				<img class="unlogin-img" src="../img/ucenter-unlogin-img.jpg" />
+				<span>亲，你还没有登录呢！</span>
+			</div>
+			<div class="unlogin-button-div">
+				<button id="regBtn" class="ucenter-reg mui-btn">注册</button>
+				<button id="loginBtn" class="ucenter-login mui-btn mui-btn-green">登录</button>
+			</div>
+		</div>
+		<div id="loginBody" class="ucenter-body  mui-fullscreen" style="display: none;">
+			<div class="ucenter-top-container">
+				<img src="../img/ucenter-top-bkimg.jpg" class="ucenter-background-img" />
+			</div>
+			<div id="userInfoBody" class="ucenter-middle-container">
+			</div>
+			<div class="ucenter-bottom-container">
+				<div class="ucenter-gridview-div">
+					<button id="ucMessage" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-message.png" />
+						<span class="ucenter-gridview-item-text">消息</span>
+					</button>
+					<button id="ucInfo" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-info.png" />
+						<span class="ucenter-gridview-item-text">资料</span>
+					</button>
+				</div>
+				<div  class="ucenter-gridview-div">
+					<button id="ucRank" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-rank.png" />
+						<span class="ucenter-gridview-item-text">排行</span>
+					</button>
+					<button id="ucSign" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-sign.png" />
+						<span class="ucenter-gridview-item-text">签到</span>
+					</button>
+				</div>
+				<div class="ucenter-gridview-div">
+					<button id="ucFans" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-fans.png" />
+						<span class="ucenter-gridview-item-text">粉丝</span>
+					</button>
+					<button id="ucScore" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-score.png" />
+						<span class="ucenter-gridview-item-text">积分</span>
+					</button>
+				</div>
+				<div class="ucenter-gridview-div">
+					<button id="ucSecure" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-secure.png" />
+						<span class="ucenter-gridview-item-text">帐号安全</span>
+					</button>
+					<button id="ucAbout" class="ucenter-gridview-item">
+						<img class="ucenter-gridview-item-icon" src="../img/ucenter-about.png" />
+						<span class="ucenter-gridview-item-text">关于</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<script id="userInfo_script" type="text/html">
+			<div class="ucenter-avater-div">
+				<img class="ucenter-avater" src="../../img/default_avatar.jpg" data-src="{{avatar128}}" onload="load(this)" />
+			</div>
+			<div class="ucenter-userinfo">
+				<span class="ucener-nickname mui-ellipsis">{{nickname}}</span>
+				<div class="ucenter-sign mui-ellipsis-2">{{signature}}</div>
+			</div>
+			<div class="ucenter-btn-div">
+				<button id="switchBtn" type="button" class="switch-btn mui-btn mui-btn-green">切换</button>
+			</div>
+		</script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ucenter-main.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

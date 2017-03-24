@@ -1,0 +1,111 @@
+.ucenter-body {
+	margin-top: 35px;
+	background-color: #FFFFFF;
+}
+.unlogin-img-div
+{
+	display: flex;
+	margin-top: 30%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.unlogin-body
+{
+	background-color: #FFFFFF;
+}
+.unlogin-img
+{
+	width: 200px;
+	margin-bottom: 5%;
+}
+.unlogin-button-div
+{
+	margin: 5% 25%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.unlogin-button-div button
+{
+	width: 100px;
+	margin:0 5%;
+}
+.ucenter-top-container {
+	height: 30%;
+	width: 100%;
+	background-color: #0062CC !important;
+}
+
+.ucenter-background-img {
+	width: 100%;
+	height: 100%;
+}
+
+.ucenter-middle-container {
+	display: flex;
+	background: #FDF5E6;
+	padding: 5%;
+}
+
+.ucenter-avater-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	position: relative;
+	top: -50px;
+}
+
+.ucenter-avater {
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+}
+
+.ucenter-userinfo {
+	width: 60%;
+	margin-left: 5%;
+}
+
+.ucener-nickname {
+	width: 80%;
+}
+
+.ucenter-sign {
+	margin-top: 5%;
+	width: 100%;
+	font-size: 14px;
+}
+
+.ucenter-btn-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 1% 0 2%;
+}
+
+.ucenter-gridview-div {
+	display: flex;
+}
+
+.ucenter-gridview-item {
+	padding-top: 5%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	border: 1px solid #EEEEEE;
+	background: #FFFFFF;
+}
+
+.ucenter-gridview-item-icon {
+	width: 40px;
+	display: block;
+	margin-bottom: 5%;
+}

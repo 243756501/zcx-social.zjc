@@ -1,0 +1,48 @@
+/*
+ * 标题栏主题(白底,标题字体颜色)
+ */
+.base-title-header
+{
+	background-color: #FFFFFF;
+	color: #F0AD4E !important;
+}
+.base-title-header h1
+{
+	color: #F0AD4E !important;
+}
+
+/*
+ * 文字按钮
+ */
+.text-btn{
+	font-size: 17px !important;
+	padding-top: 14px !important;
+	padding-bottom: 14px !important;
+}
+.base-head-btn{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+.base-head-btn:active{
+	background: #1a9bac;
+}
+
+/*
+ * 去掉标题栏和选项卡间隙
+ */
+.base-head-combine
+{
+	box-shadow: 0 0px 0px #FFFFFF !important;
+	color: #1ABC9C;
+}
+
+/*
+ * loading加载框
+ */
+.base-loading
+{
+	text-align: center;
+	margin-top: 60%;
+}
