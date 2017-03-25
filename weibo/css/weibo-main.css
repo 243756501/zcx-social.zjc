@@ -1,0 +1,80 @@
+.weibo-item-userinfo-div
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.weibo-item-userinfo
+{
+	display: flex;
+	flex: 10;
+}
+.weibo-item-avatar
+{
+	width: 40px;
+	border-radius: 50%;
+}
+.weibo-item-info-div
+{
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+}
+.weibo-item-mobile-div
+{
+	display: flex;
+}
+.weibo-item-nickname
+{
+	width: 100%;
+	color: #EC971F;
+}
+.weibo-item-sendtime
+{
+	width: 60px;
+}
+.weibo-item-from
+{
+	width: 100px;
+	margin-left: 5px;
+}
+.weibo-item-complain
+{
+	flex: 0.5;
+}
+.weibo-item-complain i
+{
+	color: #AAAAAA;
+	font-size: 18px;
+}
+.weibo-item-content-div
+{
+	font-size: 15px;
+	padding: 10px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.weibo-item-other-div
+{
+	margin-top: 10px;
+	display: flex;
+}
+.weibo-item-other-div div
+{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 1px solid #DDDDDD;
+}
+.weibo-item-other-div div:first-child
+{
+	border-left: 0px solid #FFFFFF !important;
+}
+
+.weibo-item-other-item  img
+{
+	position: relative;
+	left: -5px;
+}

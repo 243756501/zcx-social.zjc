@@ -130,7 +130,7 @@ var webtool = {
 			})
 			setTimeout(function() {
 				callback(wb);
-			}, 300)
+			}, 500)
 		} else {
 			callback(wb);
 		}

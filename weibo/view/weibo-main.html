@@ -6,16 +6,63 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/weibo-main.css" />
 	</head>
 
 	<body>
-		<div class="mui-content">
-		   <h1>微博页面</h1>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<div class="base-title-header mui-title">
+				<span>一条有梦想的闲鱼</span>
+				<i class="mui-icon mui-icon-arrowdown"></i>
+			</div>
+		</header>
+		<div class="mui-content base-pagebody mui-fullscreen">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll base-listview-scroll" >
+					<ul class="weibo-ul mui-table-view base-listview-ul">
+						<li class="weibo-item- mui-table-view-cell">
+							<div class="weibo-item-userinfo-div">
+								<div class="weibo-item-userinfo">
+									<div class="weibo-item-avatar-div">
+										<img class="weibo-item-avatar" src="../../img/default_avatar.jpg"/>
+									</div>
+									<div class="weibo-item-info-div">
+										<span class="weibo-item-nickname mui-ellipsis">桐乡吴彦祖</span>
+										<div class="weibo-item-mobile-div">
+										<span class="base-grey-font weibo-item-sendtime">三分钟前</span>
+										<span class="base-grey-font weibo-item-from">来自vivo X7</span>	
+										</div>										
+									</div>
+								</div>
+								<div class="weibo-item-complain">
+									<i class="mui-icon mui-icon-arrowdown"></i>
+								</div>
+							</div>
+							<div class="weibo-item-content-div">
+								<span>老是问自己，帅有错吗！</span>
+							</div>
+							<div class="weibo-item-other-div">
+								<div class="weibo-item-other-item weibo-item-transmit">
+									<img class="base-own-icon" src="../img/weibo-item-repost.png"></img>
+									<span class="base-grey-font">6</span>
+								</div>
+								<div class="weibo-item-other-item weibo-item-comment">
+									<img class="base-own-icon" src="../img/weibo-item-comment.png"></img>
+									<span class="base-grey-font">200</span>
+								</div>
+								<div class="weibo-item-other-item weibo-item-like">
+									<img class="base-own-icon" src="../img/weibo-item-like.png"></img>
+									<span class="base-grey-font">112</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
+		<script src="js/weibo-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

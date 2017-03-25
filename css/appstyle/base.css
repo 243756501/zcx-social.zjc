@@ -46,3 +46,51 @@
 	text-align: center;
 	margin-top: 60%;
 }
+/*
+ * 页面主体部分
+ */
+.base-pagebody
+{
+	margin-top: 45px !important;
+	/*background-color: #FFFFFF  !important;*/
+}
+/*
+ * 设置ListView ul主体颜色，与item项形成色差
+ */
+.base-listview-scroll .mui-table-view
+{
+	background-color: #EEEEEE !important;
+}
+
+/*
+ * 设置ListView每个item项间隔以及Item项颜色
+ */
+.base-listview-ul .mui-table-view-cell
+{
+	padding: 0 !important;
+	margin-bottom: 5px;
+	padding: 10px !important;
+	background-color: #FFFFFF;
+}
+
+.base-listview-li .mui-table-view-cell:after
+{
+	left: 0;
+}
+
+/*
+ * 图片icon样式
+ */
+.base-own-icon
+{
+	width: 20px;
+}
+
+/*
+ * 灰色小字体
+ */
+.base-grey-font
+{
+	color: #AAAAAA;
+	font-size: 12px;
+}
