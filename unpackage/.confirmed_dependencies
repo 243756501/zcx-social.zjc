@@ -1,192 +1,211 @@
 {
-  "index/view/index_wel.html": {
-    "resources": [
-      "js/mui/mui.min.js",
-      "index/img/1.jpg",
-      "index/js/index_wel.js",
-      "index/img/2.jpg",
-      "css/mui/mui.min.css",
-      "index/img/3.jpg",
-      "css/animate/animate.min.css",
-      "index/view/js/index_wel.js",
-      "index/css/index_wel.css",
-      "js/tool/apptools.js",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "index/view/index_module.html",
-      "index/view/index_main.html"
-    ]
-  },
-  "index/view/index_module.html": {
-    "resources": [
-      "js/mui/mui.min.js",
-      "css/mui/mui.min.css",
-      "css/mui/mui.css",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "index/img/home_pressed.png",
-      "index/img/forum_normal.png",
-      "index/img/middle_pressed.png",
-      "index/img/person_normal.png",
-      "index/img/message_normal.png",
-      "js/mui.min.js",
-      "index/img/home_normal.png",
-      "index/img/forum_pressed.png",
-      "index/img/person_pressed.png",
-      "index/img/message_pressed.png",
-      "lib/jquery.rotate.min.js",
-      "lib/jquery.min.js",
-      "index/view/js/index_module.js",
-      "index/css/index_module.css"
-    ],
-    "refer": []
-  },
-  "index/view/index_main.html": {
-    "resources": [
-      "index/view/index_module.html",
-      "fonts/mui.ttf",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/tool/apptools.js",
-      "index/view/js/index_main.js",
-      "weibo/view/weibo-main.html"
-    ],
-    "refer": [
-      "index/view/index_module.html",
-      "weibo/view/weibo-main.html",
-      "ucenter/view/ucenter-main.html",
-      "news/view/news-main.html",
-      "question/view/question-main.html",
-      "middle/view/middle-main.html"
-    ]
-  },
-  "question/view/question-main.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf"
-    ],
-    "refer": []
-  },
-  "news/view/news-main.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/appstyle/base.css",
-      "js/tool/apptools.js",
-      "img/default_avatar.jpg",
-      "ucenter/img/ucenter-top-bkimg.jpg",
-      "js/tool/net_tools.js",
-      "js/tool/md5.min.js",
-      "js/tool/imgload.js",
-      "js/tool/httptool.js",
-      "config.js",
-      "js/tool/app.js",
-      "js/tool/mui.pullToRefresh.js",
-      "css/pull-top-tips.css",
-      "js/tool/mui.pullToRefresh.material.js",
-      "news/js/news.js",
-      "js/lib/template.js",
-      "news/css/news-main.css",
-      "news/view/js/news-main.js"
-    ],
-    "refer": [
-      "news/view/news-detail.html"
-    ]
-  },
-  "ucenter/view/ucenter-main.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/appstyle/base.css",
-      "ucenter/img/ucenter-background.jpg",
-      "ucenter/img/ucenter-top-background.jpg",
-      "img/default_avatar.jpg",
-      "ucenter/img/ucenter-top-bkimg.jpg",
-      "ucenter/img/ucenter-about.png",
-      "ucenter/img/ucenter-info.png",
-      "ucenter/img/ucenter-message.png",
-      "ucenter/img/ucenter-rank.png",
-      "ucenter/img/ucenter-secure.png",
-      "ucenter/img/ucenter-sign.png",
-      "ucenter/img/ucenter-fans.png",
-      "ucenter/img/ucenter-score.png",
-      "ucenter/css/ucenter-main.css",
-      "ucenter/img/ucenter-unlogin-img.jpg",
-      "js/tool/httptool.js",
-      "config.js",
-      "js/tool/apptools.js",
-      "js/tool/app.js",
-      "js/lib/template.js",
-      "js/tool/imgload.js",
-      "js/tool/net_tools.js",
-      "js/tool/md5.min.js",
-      "ucenter/view/js/ucenter-main.js"
-    ],
-    "refer": [
-      "account/view/account-login.html",
-      "account/view/account-reg.html"
-    ]
-  },
-  "weibo/view/weibo-main.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "account/view/account-login.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "account/js/account.js",
-      "js/tool/httptool.js",
-      "config.js",
-      "account/img/login-background.jpg",
-      "img/app-logo.png",
-      "css/appstyle/base.css",
-      "account/css/account-login.css",
-      "js/tool/apptools.js",
-      "js/tool/app.js",
-      "account/view/js/account-login.js"
-    ],
-    "refer": [
-      "account/view/account-reg.html"
-    ]
-  },
-  "news/view/news-detail.html": {
-    "resources": [
-      "fonts/mui-icons-extra.ttf",
-      "fonts/mui.ttf",
-      "css/icons-extra.css",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/appstyle/base.css",
-      "ucenter/img/ucenter-top-bkimg.jpg",
-      "img/default_avatar.jpg",
-      "news/css/news-detail.css",
-      "news/view/js/news-detail.js",
-      "js/lib/template.js",
-      "js/tool/httptool.js",
-      "config.js",
-      "js/tool/apptools.js",
-      "js/tool/app.js",
-      "js/tool/imgload.js",
-      "js/tool/net_tools.js",
-      "js/tool/md5.min.js",
-      "news/js/news.js",
-      "css/detail.content.css",
-      "js/tool/imgtools.js",
-      "js/tool/mui.previewimage.js",
-      "js/tool/mui.zoom.js",
-      "css/previewimage.css",
-      "img/df_big.png"
-    ],
-    "refer": []
-  }
+	"index/view/index_wel.html": {
+		"resources": [
+			"js/mui/mui.min.js",
+			"index/img/1.jpg",
+			"index/js/index_wel.js",
+			"index/img/2.jpg",
+			"css/mui/mui.min.css",
+			"index/img/3.jpg",
+			"css/animate/animate.min.css",
+			"index/view/js/index_wel.js",
+			"index/css/index_wel.css",
+			"js/tool/apptools.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"index/view/index_module.html",
+			"index/view/index_main.html"
+		]
+	},
+	"index/view/index_module.html": {
+		"resources": [
+			"js/mui/mui.min.js",
+			"css/mui/mui.min.css",
+			"css/mui/mui.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"index/img/home_pressed.png",
+			"index/img/forum_normal.png",
+			"index/img/middle_pressed.png",
+			"index/img/person_normal.png",
+			"index/img/message_normal.png",
+			"js/mui.min.js",
+			"index/img/home_normal.png",
+			"index/img/forum_pressed.png",
+			"index/img/person_pressed.png",
+			"index/img/message_pressed.png",
+			"lib/jquery.rotate.min.js",
+			"lib/jquery.min.js",
+			"index/view/js/index_module.js",
+			"index/css/index_module.css"
+		],
+		"refer": []
+	},
+	"index/view/index_main.html": {
+		"resources": [
+			"index/view/index_module.html",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/tool/apptools.js",
+			"index/view/js/index_main.js",
+			"weibo/view/weibo-main.html"
+		],
+		"refer": [
+			"index/view/index_module.html",
+			"weibo/view/weibo-main.html",
+			"ucenter/view/ucenter-main.html",
+			"news/view/news-main.html",
+			"question/view/question-main.html",
+			"middle/view/middle-main.html"
+		]
+	},
+	"question/view/question-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": []
+	},
+	"news/view/news-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"js/tool/apptools.js",
+			"img/default_avatar.jpg",
+			"ucenter/img/ucenter-top-bkimg.jpg",
+			"js/tool/net_tools.js",
+			"js/tool/md5.min.js",
+			"js/tool/imgload.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"js/tool/app.js",
+			"js/tool/mui.pullToRefresh.js",
+			"css/pull-top-tips.css",
+			"js/tool/mui.pullToRefresh.material.js",
+			"news/js/news.js",
+			"js/lib/template.js",
+			"news/css/news-main.css",
+			"news/view/js/news-main.js"
+		],
+		"refer": [
+			"news/view/news-detail.html"
+		]
+	},
+	"ucenter/view/ucenter-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"ucenter/img/ucenter-background.jpg",
+			"ucenter/img/ucenter-top-background.jpg",
+			"img/default_avatar.jpg",
+			"ucenter/img/ucenter-top-bkimg.jpg",
+			"ucenter/img/ucenter-about.png",
+			"ucenter/img/ucenter-info.png",
+			"ucenter/img/ucenter-message.png",
+			"ucenter/img/ucenter-rank.png",
+			"ucenter/img/ucenter-secure.png",
+			"ucenter/img/ucenter-sign.png",
+			"ucenter/img/ucenter-fans.png",
+			"ucenter/img/ucenter-score.png",
+			"ucenter/css/ucenter-main.css",
+			"ucenter/img/ucenter-unlogin-img.jpg",
+			"js/tool/httptool.js",
+			"config.js",
+			"js/tool/apptools.js",
+			"js/tool/app.js",
+			"js/lib/template.js",
+			"js/tool/imgload.js",
+			"js/tool/net_tools.js",
+			"js/tool/md5.min.js",
+			"ucenter/view/js/ucenter-main.js"
+		],
+		"refer": [
+			"account/view/account-login.html",
+			"account/view/account-reg.html"
+		]
+	},
+	"weibo/view/weibo-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/default_avatar.jpg",
+			"weibo/css/weibo-main.css",
+			"weibo/view/js/weibo-main.js",
+			"weibo/img/weibo-item-like.png",
+			"weibo/img/weibo-item-comment.png",
+			"weibo/img/weibo-item-repost.png",
+			"css/appstyle/base.css",
+			"js/tool/httptool.js",
+			"config.js",
+			"js/tool/apptools.js",
+			"js/tool/app.js",
+			"js/tool/mui.pullToRefresh.js",
+			"css/pull-top-tips.css",
+			"js/tool/mui.pullToRefresh.material.js",
+			"js/tool/mui.previewimage.js",
+			"js/lib/template.js",
+			"js/tool/imgload.js",
+			"js/tool/net_tools.js",
+			"js/tool/md5.min.js"
+		],
+		"refer": []
+	},
+	"account/view/account-login.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"account/js/account.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"account/img/login-background.jpg",
+			"img/app-logo.png",
+			"css/appstyle/base.css",
+			"account/css/account-login.css",
+			"js/tool/apptools.js",
+			"js/tool/app.js",
+			"account/view/js/account-login.js"
+		],
+		"refer": [
+			"account/view/account-reg.html"
+		]
+	},
+	"news/view/news-detail.html": {
+		"resources": [
+			"fonts/mui-icons-extra.ttf",
+			"fonts/mui.ttf",
+			"css/icons-extra.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"ucenter/img/ucenter-top-bkimg.jpg",
+			"img/default_avatar.jpg",
+			"news/css/news-detail.css",
+			"news/view/js/news-detail.js",
+			"js/lib/template.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"js/tool/apptools.js",
+			"js/tool/app.js",
+			"js/tool/imgload.js",
+			"js/tool/net_tools.js",
+			"js/tool/md5.min.js",
+			"news/js/news.js",
+			"css/detail.content.css",
+			"js/tool/imgtools.js",
+			"js/tool/mui.previewimage.js",
+			"js/tool/mui.zoom.js",
+			"css/previewimage.css",
+			"img/df_big.png"
+		],
+		"refer": []
+	}
 }

@@ -343,7 +343,26 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"img/default_avatar.jpg",
+					"weibo/css/weibo-main.css",
+					"weibo/view/js/weibo-main.js",
+					"weibo/img/weibo-item-like.png",
+					"weibo/img/weibo-item-comment.png",
+					"weibo/img/weibo-item-repost.png",
+					"css/appstyle/base.css",
+					"js/tool/httptool.js",
+					"config.js",
+					"js/tool/apptools.js",
+					"js/tool/app.js",
+					"js/tool/mui.pullToRefresh.js",
+					"css/pull-top-tips.css",
+					"js/tool/mui.pullToRefresh.material.js",
+					"js/tool/mui.previewimage.js",
+					"js/lib/template.js",
+					"js/tool/imgload.js",
+					"js/tool/net_tools.js",
+					"js/tool/md5.min.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -361,7 +380,8 @@
 					"account/css/account-login.css",
 					"js/tool/apptools.js",
 					"js/tool/app.js",
-					"account/view/js/account-login.js"
+					"account/view/js/account-login.js",
+					null
 				],
 				"refer": [
 					"account/view/account-reg.html"

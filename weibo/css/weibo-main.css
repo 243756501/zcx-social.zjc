@@ -43,7 +43,7 @@
 {
 	flex: 0.5;
 }
-.weibo-item-complain i
+.weibo-item-complain a
 {
 	color: #AAAAAA;
 	font-size: 18px;
@@ -77,4 +77,9 @@
 {
 	position: relative;
 	left: -5px;
+}
+#reportPopover
+{
+	height: 100px;
+	width: 80px;
 }

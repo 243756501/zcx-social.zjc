@@ -24,17 +24,18 @@ var initEvent = function() {
 			if(res.data) {
 				webtool.openPreView('../../index/view/index_main', function(wb) {
 					mui.toast('登录成功');
-					var ucenter = plus.webview.getWebviewById('../../ucenter/view/ucenter-main.html');
+					//给每个webview都发送,因为用户登录信息更改影响很多页面
+					var all = plus.webview.all();
 					console.log(JSON.stringify(res))
 					app.saveUser(JSON.stringify(res));
-					mui.fire(ucenter, 'userchange', {
-						'userInfo': res
-					})
+					for(var i in all) {
+						mui.fire(all[i], 'userchange', {
+							'userInfo': res
+						})
+					}
 					wb.show('slide-in-right');
 				});
-			}
-			else
-			{
+			} else {
 				mui.toast(res.info);
 			}
 		})
