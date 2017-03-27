@@ -365,7 +365,8 @@
 					"js/tool/md5.min.js",
 					"weibo/js/weibo.js",
 					"weibo/js/weibo-render.js",
-					"img/weibo_df.png"
+					"img/weibo_df.png",
+					"img/df_big.png"
 				],
 				"refer": [],
 				"priority": 0

@@ -33,7 +33,7 @@ mui.plusReady(function() {
 			apptools.changePage(dom.titleOn, dom.titleOff, true);
 		}
 	});
-
+	mui.previewImage();
 	mui('.mui-scroll-wrapper').scroll({
 		deceleration: 0.005
 	});
