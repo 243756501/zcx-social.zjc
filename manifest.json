@@ -366,7 +366,12 @@
 					"weibo/js/weibo.js",
 					"weibo/js/weibo-render.js",
 					"img/weibo_df.png",
-					"img/df_big.png"
+					"img/df_big.png",
+					"weibo/img/weibo-hot.png",
+					"css/previewimage.css",
+					"weibo/img/weibo-all.png",
+					"weibo/img/weibo-mine.png",
+					"css/animate/animate.min.css"
 				],
 				"refer": [],
 				"priority": 0

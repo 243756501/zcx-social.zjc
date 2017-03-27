@@ -2,8 +2,14 @@ mui.init();
 var dom = {
 	titleOn: mui('#titleOn')[0],
 	titleOff: mui('#titleOff')[0],
-	weiboUl: mui('#weiboUl')[0]
+	weiboUl: mui('#weiboUl')[0],
+	TypeChoose: mui('#weiboType_choose')[0],
+	titleArrow: mui('#titleArrow')[0],
+	titleKey: true,
 }
+var mask = mui.createMask(function() {
+	return  dom.titleKey;
+}); //callback为用户点击蒙版时自动执行的回调；
 var postInfo = {
 	type: "all",
 	page: 1
@@ -24,6 +30,19 @@ var tool = {
 		li.innerHTML = html;
 		return li;
 	},
+	titleTap: function(boolean) {
+		if(boolean) {
+			dom.titleKey = !boolean;
+			dom.titleArrow.setAttribute('class', 'mui-icon mui-icon-arrowup');
+			apptools.showHide(dom.TypeChoose, true);
+			mask.show();			
+		} else {
+			dom.titleKey = !boolean;
+			dom.titleArrow.setAttribute('class', 'mui-icon mui-icon-arrowdown');
+			apptools.showHide(dom.TypeChoose, false);
+			mask.close();		
+		}
+	}
 }
 mui.plusReady(function() {
 	window.addEventListener('userchange', function(e) {
@@ -59,7 +78,7 @@ mui.plusReady(function() {
 			callback: function() {
 				var pullObj = this;
 				postInfo.page = 1;
-				dom.weiboUl.innerHTML="";
+				dom.weiboUl.innerHTML = "";
 				weibo.getWeiboList(postInfo, function(res) {
 					if(res.data) {
 						for(var i in res.data) {
@@ -74,7 +93,10 @@ mui.plusReady(function() {
 					}
 				})
 			}
-		}		
+		}
 	});
 	mui('.mui-content .mui-scroll').pullToRefresh().pullDownLoading();
+	dom.titleOff.addEventListener('tap', function() {
+		tool.titleTap(dom.titleKey);
+	})
 });

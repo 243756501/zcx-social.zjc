@@ -9,7 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
 		<link rel="stylesheet" type="text/css" href="../css/weibo-main.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/previewimage.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/previewimage.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.min.css" />
 	</head>
 
 	<body>
@@ -19,9 +20,25 @@
 			</div>
 			<div id="titleOn" class="base-title-header mui-title" style="display: none;">
 				<span id="titleUser">一条有梦想的闲鱼</span>
-				<i class="mui-icon mui-icon-arrowdown"></i>
+				<i id="titleArrow" class="mui-icon mui-icon-arrowdown"></i>
 			</div>
 		</header>
+		<div id="weiboType_choose" class="weibo-type-body animated fadeInDown" style="display: none;">
+			<div class="weibo-type-container">
+				<div class="weibo-type-item">
+					<img class="weibo-type-item-img" src="../img/weibo-all.png" />
+					<span class="weibo-type-item-font weibo-type-active">全站动态</span>
+				</div>
+				<div class="weibo-type-item">
+					<img class="weibo-type-item-img" src="../img/weibo-hot.png" />
+					<span class="weibo-type-item-font">热门推荐</span>
+				</div>
+				<div class="weibo-type-item">
+					<img class="weibo-type-item-img" src="../img/weibo-mine.png" />
+					<span class="weibo-type-item-font">我的微博</span>
+				</div>
+			</div>
+		</div>
 		<div class="mui-content base-pagebody mui-fullscreen">
 			<div class="mui-scroll-wrapper">
 				<div class="mui-scroll base-listview-scroll">

@@ -171,3 +171,51 @@
 	color: #1ABC9C;
 	margin-left: 2px;
 }
+.weibo-type-body
+{
+	background-color: rgba(0,0,0,.1);	
+	height: 150px;
+	width: 100%;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	z-index: 9999;
+}
+.weibo-type-container
+{
+	display: flex;
+	height: 150px;
+	justify-content: space-around;
+	width: 100%;
+}
+.mui-backdrop {
+    position: fixed;
+    top: 45px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgba(0,0,0,.1);
+}
+.weibo-type-item
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.weibo-type-item-img
+{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 15px;
+}
+.weibo-type-item-font
+{
+	color: #FFFFFF;
+}
+.weibo-type-active
+{
+	font-weight: bold;
+	color: #000000;
+}
