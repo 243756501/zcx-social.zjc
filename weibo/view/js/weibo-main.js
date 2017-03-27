@@ -8,7 +8,7 @@ var dom = {
 	titleKey: true,
 }
 var mask = mui.createMask(function() {
-	return  dom.titleKey;
+	return dom.titleKey;
 }); //callback为用户点击蒙版时自动执行的回调；
 var postInfo = {
 	type: "all",
@@ -35,16 +35,27 @@ var tool = {
 			dom.titleKey = !boolean;
 			dom.titleArrow.setAttribute('class', 'mui-icon mui-icon-arrowup');
 			apptools.showHide(dom.TypeChoose, true);
-			mask.show();			
+			mask.show();
 		} else {
 			dom.titleKey = !boolean;
 			dom.titleArrow.setAttribute('class', 'mui-icon mui-icon-arrowdown');
 			apptools.showHide(dom.TypeChoose, false);
-			mask.close();		
+			mask.close();
 		}
+	},
+	changeTypeColor: function(type) {
+		mui.each(document.querySelectorAll('.weibo-type-item-font'), function(index, item) {
+			var objClass = item.className;
+			if(objClass.indexOf('weibo-type-active')) {
+				item.className = "weibo-type-item-font";
+			}
+		})
+		mui('#title_' + type)[0].className = "weibo-type-item-font weibo-type-active";
+		mui.trigger(dom.titleOn, 'tap');
 	}
 }
-mui.plusReady(function() {
+var initEvent = function() {
+	//监听用户更改
 	window.addEventListener('userchange', function(e) {
 		var userInfo = e.detail.userInfo;
 		if(userInfo) {
@@ -52,6 +63,34 @@ mui.plusReady(function() {
 			apptools.changePage(dom.titleOn, dom.titleOff, true);
 		}
 	});
+	//头部微博
+	dom.titleOn.addEventListener('tap', function() {
+		tool.titleTap(dom.titleKey);
+	});
+	//监听微博类型选择事件
+	mui('#weiboType_choose').on('tap', '.weibo-type-item', function() {
+		var type = this.getAttribute('id');
+		dom.weiboUl.innerHTML = "";
+		if(type == "user") {
+			app.getUserInfo(function(userInfo) {
+				var uid=userInfo.data_1.uid;
+				postInfo.type="user";
+				postInfo.uid=uid;
+				postInfo.page=1;
+			})
+		}
+		else
+		{   
+			postInfo.type=type;
+			postInfo.page=1;
+		}
+		tool.changeTypeColor(type);
+		mui('.mui-content .mui-scroll').pullToRefresh().pullDownLoading();
+		
+	});
+}
+mui.plusReady(function() {
+	initEvent();
 	mui.previewImage();
 	mui('.mui-scroll-wrapper').scroll({
 		deceleration: 0.005
@@ -69,7 +108,8 @@ mui.plusReady(function() {
 						}
 						res.data.length < 10 ? pullObj.endPullUpToRefresh(true) : pullObj.endPullUpToRefresh(false);
 					} else {
-						mui.toast(res.info)
+						mui.toast(res.info);
+						pullObj.endPullUpToRefresh(true)
 					}
 				})
 			}
@@ -89,14 +129,13 @@ mui.plusReady(function() {
 						pullObj.refresh();
 						res.data.length < 10 ? pullObj.endPullUpToRefresh(true) : pullObj.endPullUpToRefresh(false);
 					} else {
-						mui.toast(res.info)
+						mui.toast(res.info);
+						pullObj.endPullDownToRefresh();
+						pullObj.endPullUpToRefresh(true)
 					}
 				})
 			}
 		}
 	});
 	mui('.mui-content .mui-scroll').pullToRefresh().pullDownLoading();
-	dom.titleOff.addEventListener('tap', function() {
-		tool.titleTap(dom.titleKey);
-	})
 });

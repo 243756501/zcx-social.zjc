@@ -12,7 +12,6 @@ var app={
 	 */
 	getUserInfo:function(callback)
 	{
-		console.log(JSON.parse(localStorage.getItem('user_info')))
 		callback(JSON.parse(localStorage.getItem('user_info')));
 	},
 	
