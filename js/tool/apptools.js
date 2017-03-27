@@ -83,6 +83,53 @@ var apptools = {
 			});
 		});
 	},
+	/**
+	 * 时间戳友好解析
+	 * @param {Object} sTime
+	 */
+	friendlyDate:function(sTime){
+	    if(!sTime)return '';
+	    if(sTime.toString().length > 10)sTime = sTime/1000;
+	    
+	    var myDate = new Date(sTime*1000);
+	    var myHours = myDate.getHours();
+	    var myMin = myDate.getMinutes();
+	    myHours = myHours<10 ?'0'+ myHours:myHours;
+	    myMin = myMin<10 ?'0'+ myMin:myMin;
+	    var timeStr = myHours+':'+ myMin;
+	    var dayStr = myDate.getMonth()+1 +'-' + myDate.getDate();
+	    
+	    //sTime=源时间，cTime=当前时间，dTime=时间差
+	    var cTime = new Date()
+	    var dTime = Date.parse(cTime)/1000 - sTime;
+	    var dDay = cTime.getDate() - myDate.getDate();
+	    var dMonth = cTime.getMonth() - myDate.getMonth();
+	    var dYear = cTime.getFullYear() - myDate.getFullYear();
+        if( dTime < 60 ){
+        	dTime = dTime>0?dTime:0;
+            return dTime +'秒前';
+        }else if(dTime < 3600 ){
+            return Math.floor(dTime/60) +'分钟前';
+            //今天的数据.年份相同.日期相同.
+        }else if(dYear == 0 && dMonth == 0 && dDay<1){
+            return '今天 '+ timeStr;
+    	}else if(dYear == 0 && dMonth == 0 && dDay<2){
+        	return '昨天 '+ timeStr;
+        }else if(dYear == 0){
+            return myDate.getMonth()+1 +'月' + myDate.getDate() + '日 '+ timeStr;
+        }else{
+            return myDate.getFullYear() + '-'+ dayStr;
+        }
+	},
+	
+	/**
+	 * 时间戳解析 改
+	 * @param {int} unixTime
+	 * @param {Object} type
+	 */
+	fmtUnixTime: function(unixTime, type) {
+		return apptools.friendlyDate(unixTime);
+	},
 };
 
 //页面辅助方法

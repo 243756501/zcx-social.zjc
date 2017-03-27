@@ -8,7 +8,7 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
 		<link rel="stylesheet" type="text/css" href="../css/weibo-main.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
 	</head>
 
 	<body>
@@ -23,44 +23,10 @@
 		</header>
 		<div class="mui-content base-pagebody mui-fullscreen">
 			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll base-listview-scroll" >
-					<ul class="weibo-ul mui-table-view base-listview-ul">
-						<li class="weibo-item mui-table-view-cell">
-							<div class="weibo-item-userinfo-div">
-								<div class="weibo-item-userinfo">
-									<div class="weibo-item-avatar-div">
-										<img class="weibo-item-avatar" src="../../img/default_avatar.jpg"/>
-									</div>
-									<div class="weibo-item-info-div">
-										<span class="weibo-item-nickname mui-ellipsis">桐乡吴彦祖</span>
-										<div class="weibo-item-mobile-div">
-										<span class="base-grey-font weibo-item-sendtime">三分钟前</span>
-										<span class="base-grey-font weibo-item-from">来自vivo X7</span>	
-										</div>										
-									</div>
-								</div>
-								<div class="weibo-item-complain">
-									<a class="mui-icon mui-icon-arrowdown" href="#reportPopover"></a>
-								</div>
-							</div>
-							<div class="weibo-item-content-div">
-								<span>老是问自己，帅有错吗！</span>
-							</div>
-							<div class="weibo-item-other-div">
-								<div class="weibo-item-other-item weibo-item-transmit">
-									<img class="base-own-icon" src="../img/weibo-item-repost.png"></img>
-									<span class="base-grey-font">6</span>
-								</div>
-								<div class="weibo-item-other-item weibo-item-comment">
-									<img class="base-own-icon" src="../img/weibo-item-comment.png"></img>
-									<span class="base-grey-font">200</span>
-								</div>
-								<div class="weibo-item-other-item weibo-item-like">
-									<img class="base-own-icon" src="../img/weibo-item-like.png"></img>
-									<span class="base-grey-font">112</span>
-								</div>
-							</div>
-						</li>
+				<div class="mui-scroll base-listview-scroll">
+					<ul id="weiboUl" class="weibo-ul mui-table-view base-listview-ul">
+						<!--<li class="weibo-item mui-table-view-cell">					
+						</li>-->
 					</ul>
 				</div>
 			</div>
@@ -70,22 +36,62 @@
 			<div class="mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell"><a href="#">举报</a>
+						<li class="mui-table-view-cell">
+							<a href="#">举报</a>
 						</li>
-						<li class="mui-table-view-cell"><a href="#">删除</a>
+						<li class="mui-table-view-cell">
+							<a href="#">删除</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+		<script id="weibo_listItem_script" type="text/html">
+			<div class="weibo-item-userinfo-div">
+				<div class="weibo-item-userinfo">
+					<div class="weibo-item-avatar-div">
+						<img class="weibo-item-avatar" src="../../img/default_avatar.jpg"  data-src="{{user.avatar128}}"/>
+					</div>
+					<div class="weibo-item-info-div">
+						<span class="weibo-item-nickname mui-ellipsis">{{user.real_nickname}}</span>
+						<div class="weibo-item-mobile-div">
+							<span class="base-grey-font weibo-item-sendtime">{{create_time}}</span>
+							<span class="base-grey-font weibo-item-from">{{from}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="weibo-item-complain">
+					<a class="mui-icon mui-icon-arrowdown" href="#reportPopover"></a>
+				</div>
+			</div>
+			<div class="weibo-item-content-div">
+				{{fetchContent}}
+			</div>
+			<div class="weibo-item-other-div">
+				<div class="weibo-item-other-item weibo-item-transmit">
+					<img class="base-own-icon" src="../img/weibo-item-repost.png"></img>
+					<span class="base-grey-font">{{repost_count}}</span>
+				</div>
+				<div class="weibo-item-other-item weibo-item-comment">
+					<img class="base-own-icon" src="../img/weibo-item-comment.png"></img>
+					<span class="base-grey-font">{{comment_count}}</span>
+				</div>
+				<div class="weibo-item-other-item weibo-item-like">
+					<img class="base-own-icon" src="../img/weibo-item-like.png"></img>
+					<span class="base-grey-font">{{support_count}}</span>
+				</div>
+			</div>
+		</script>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>	
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/weibo-render.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/weibo.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/weibo-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 

@@ -17,10 +17,11 @@ mui.plusReady(function() {
 				callback: function() {
 					var pullObj = this;
 					var ul = item.getElementsByClassName('mui-table-view')[0];
-					var newsId = ul.getAttribute('id');
+					var newsId = ul.getAttribute('id');				
 					ul.setAttribute('page', '2');
 					postInfo['id'] = newsId;
 					postInfo['page'] = 1;
+					ul.innerHTML="";
 					news.getNewsList(postInfo, function(res) {
 						if(res.data) {
 							for(var i in res.data) {
