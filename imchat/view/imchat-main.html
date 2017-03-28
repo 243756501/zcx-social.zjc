@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<style>
+			.imchat-main-body {
+				margin-top: 45px;
+			}
+			
+			.im-unload {
+				margin-top: 40%;
+				display: flex;
+				justify-content: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<h1 class="mui-title">实时互动</h1>
+			<i class="mui-icon mui-icon-personadd mui-pull-right"></i>
+		</header>
+		<div class="im-unload">
+			亲，您还没有登录哟
+		</div>
+		<div class="imchat-main-body mui-fullscreen" style="display: none;">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			//前置，不加的话无法连接
+			window["SCHEMETYPE"] = 'http';
+			window["WEB_XHR_POLLING"] = true;
+		</script>
+		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/RongIMLib-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			var dom = {
+				appkey: '82hegw5u83awx'
+			};
+			var tool = {
+				//初始化融云
+				initRongIM: function() {
+					RongIMLib.RongIMClient.init(dom.appkey);
+				},
+			};
+			var initEvent = function() {
+				// 设置连接监听状态 （ status 标识当前连接状态 ）
+				// 连接状态监听器
+				RongIMClient.setConnectionStatusListener({
+					onChanged: function(status) {
+						switch(status) {
+							case RongIMLib.ConnectionStatus.CONNECTED:
+								console.log('链接成功');
+								break;
+							case RongIMLib.ConnectionStatus.CONNECTING:
+								console.log('正在链接');
+								break;
+							case RongIMLib.ConnectionStatus.DISCONNECTED:
+								console.log('断开连接');
+								break;
+							case RongIMLib.ConnectionStatus.KICKED_OFFLINE_BY_OTHER_CLIENT:
+								console.log('其他设备登录');
+								break;
+							case RongIMLib.ConnectionStatus.DOMAIN_INCORRECT:
+								console.log('域名不正确');
+								break;
+							case RongIMLib.ConnectionStatus.NETWORK_UNAVAILABLE:
+								console.log('网络不可用');
+								break;
+						}
+					}
+				});
+				//消息监听器
+				RongIMClient.setOnReceiveMessageListener({
+					// 接收到的消息
+					onReceived: function(message) {
+
+					}
+				});
+			};
+			mui.plusReady(function() {
+				initEvent();
+			});
+		</script>
+	</body>
+
+</html>
