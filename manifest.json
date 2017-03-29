@@ -287,7 +287,8 @@
 					"js/tool/net_tools.js",
 					"js/tool/md5.min.js",
 					"css/detail.content.css",
-					"js/tool/imgtools.js"
+					"js/tool/imgtools.js",
+					"question/view/js/question-main.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -471,6 +472,22 @@
 				"resources": [
 					"css/mui.min.css",
 					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"middle/view/middle-main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/appstyle/base.css",
+					"fonts/mui.ttf",
+					"middle/img/middle-market.png",
+					"middle/img/middle-forum.png",
+					"middle/img/middle-mine.png",
+					"middle/img/middle-searchp.png",
+					"middle/img/middle-activity.png",
+					"css/animate/animate.min.css"
 				],
 				"refer": [],
 				"priority": 0

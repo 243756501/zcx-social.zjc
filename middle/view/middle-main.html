@@ -6,12 +6,91 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.min.css" />
+		<style>
+			.middle-body {
+				margin-top: 45px;
+				background-color: #FFFFFF;
+			}
+			
+			.mui-media-body {
+				margin-top: 1%;
+				margin-left: 8%;
+			}
+			
+			.mui-media-body p {
+				margin-top: 5px;
+			}
+		</style>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<h1 class="mui-title">更多精彩</h1>
+		</header>
+		<div class="middle-body mui-fullscreen">
+			<ul class="mui-table-view base-listview-item-height">
+				<li id="mall" class="mui-table-view-cell animated bounceInRight" style="display: none;">
+					<img class="mui-media-object mui-pull-left" src="../img/middle-market.png">
+					<div class="mui-media-body">
+						积分商城
+						<p class="mui-ellipsis">买买买</p>
+					</div>
+				</li>
+				<li id="forum" class="mui-table-view-cell animated bounceInRight" style="display: none;">
+					<img class="mui-media-object mui-pull-left" src="../img/middle-forum.png">
+					<div class="mui-media-body">
+						动感论坛
+						<p class="mui-ellipsis">聊聊聊</p>
+					</div>
+				</li>
+				<li id="search" class="mui-table-view-cell animated bounceInRight" style="display: none;">
+					<img class="mui-media-object mui-pull-left" src="../img/middle-searchp.png">
+					<div class="mui-media-body">
+						众里寻ta
+						<p class="mui-ellipsis">约约约</p>
+					</div>
+				</li>
+				<li id="album" class="mui-table-view-cell animated bounceInRight" style="display: none;">
+					<img class="mui-media-object mui-pull-left" src="../img/middle-mine.png">
+					<div class="mui-media-body">
+						我的地带
+						<p class="mui-ellipsis">秀秀秀</p>
+					</div>
+				</li>
+				<li id="activity" class="mui-table-view-cell animated bounceInRight" style="display: none;">
+					<img class="mui-media-object mui-pull-left" src="../img/middle-activity.png">
+					<div class="mui-media-body">
+						精彩活动
+						<p class="mui-ellipsis">玩玩玩</p>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			var array = ["mall", "forum", "search", "album", "activity"];
+			var i = 0;
+			var listitemShow = function() {
+				var timecount = setInterval(function() {
+					if(i < array.length) {
+						mui('#' + array[i])[0].style.display = "block";	
+						i++
+					}
+					else
+					{
+						clearInterval(timecount);
+						i=0;
+					}
+				}, 800)
+			}
+			var listitemHide = function() {
+				mui('.mui-table-view-cell').each(function(index, item) {
+					item.style.display = "none";
+				})
+			}
 		</script>
 	</body>
 

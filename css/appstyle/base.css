@@ -1,96 +1,120 @@
 /*
  * 标题栏主题(白底,标题字体颜色)
  */
-.base-title-header
-{
+
+.base-title-header {
 	background-color: #FFFFFF;
 	color: #F0AD4E !important;
 }
-.base-title-header h1
-{
+
+.base-title-header h1 {
 	color: #F0AD4E !important;
 }
+
 
 /*
  * 文字按钮
  */
-.text-btn{
+
+.text-btn {
 	font-size: 17px !important;
 	padding-top: 14px !important;
 	padding-bottom: 14px !important;
 }
-.base-head-btn{
+
+.base-head-btn {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 5px !important;
 	padding-right: 5px !important;
 }
-.base-head-btn:active{
+
+.base-head-btn:active {
 	background: #1a9bac;
 }
+
 
 /*
  * 去掉标题栏和选项卡间隙
  */
-.base-head-combine
-{
+
+.base-head-combine {
 	box-shadow: 0 0px 0px #FFFFFF !important;
 	color: #1ABC9C;
 }
 
+
 /*
  * loading加载框
  */
-.base-loading
-{
+
+.base-loading {
 	text-align: center;
 	margin-top: 60%;
 }
+
+
 /*
  * 页面主体部分
  */
-.base-pagebody
-{
+
+.base-pagebody {
 	margin-top: 45px !important;
 	/*background-color: #FFFFFF  !important;*/
 }
+
+
 /*
  * 设置ListView ul主体颜色，与item项形成色差
  */
-.base-listview-scroll .mui-table-view
-{
+
+.base-listview-scroll .mui-table-view {
 	background-color: #EEEEEE !important;
 }
+
 
 /*
  * 设置ListView每个item项间隔以及Item项颜色
  */
-.base-listview-ul .mui-table-view-cell
-{
+
+.base-listview-ul .mui-table-view-cell {
 	padding: 0 !important;
 	margin-bottom: 5px;
 	padding: 10px !important;
 	background-color: #FFFFFF;
 }
 
-.base-listview-li .mui-table-view-cell:after
-{
+.base-listview-li .mui-table-view-cell:after {
 	left: 0;
 }
+
 
 /*
  * 图片icon样式
  */
-.base-own-icon
-{
+
+.base-own-icon {
 	width: 20px;
 }
+
 
 /*
  * 灰色小字体
  */
-.base-grey-font
-{
+
+.base-grey-font {
 	color: #AAAAAA;
 	font-size: 12px;
+}
+
+
+/*
+ * listview item内容设置
+ */
+
+.base-listview-item-height .mui-table-view-cell {
+	height: 100px !important;
+	display: flex;
+	align-items: center;
+	font-size: 20px !important;
 }

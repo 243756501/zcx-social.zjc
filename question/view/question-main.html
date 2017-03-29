@@ -9,9 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
 		<link rel="stylesheet" type="text/css" href="../css/question-main.css" />
-		<style type="text/css">
-
-		</style>
 	</head>
 
 	<body>
@@ -51,67 +48,7 @@
 		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/question-render.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/question.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			mui.init();
-			var postInfo = {
-				'page': 1,
-				'type': 'wait'
-			}
-			mui.each(document.querySelectorAll('.mui-scroll'), function(index, item) {
-				mui(item).pullToRefresh({
-					up: {
-						callback: function() {
-							var pullObj = this;
-							var ul = item.getElementsByClassName('mui-table-view')[0];
-							postInfo.page = parseInt(ul.getAttribute('data-page'))+1;
-							postInfo.type = ul.getAttribute('id');
-							console.log(postInfo.page)
-							question.getQuestionList(postInfo, function(res) {
-								if(res.data) {
-									for(var i in res.data) {
-										var li = get_question_li(res.data[i]);
-										ul.appendChild(li);
-										res.data.length < 10 ? pullObj.endPullUpToRefresh(true) : pullObj.endPullUpToRefresh(false);
-									}
-								} else {
-									pullObj.endPullUpToRefresh(true)
-								}
-							})
-							ul.setAttribute('data-page', postInfo.page);
-						}
-					},
-					down: {
-						callback: function() {
-							var pullObj = this;
-							var ul = item.getElementsByClassName('mui-table-view')[0];
-							postInfo.page = 1;
-							postInfo.type = ul.getAttribute('id');
-							question.getQuestionList(postInfo, function(res) {
-								if(res.data) {
-									for(var i in res.data) {
-										var li = get_question_li(res.data[i]);
-										ul.appendChild(li);
-										pullObj.endPullDownToRefresh();
-										pullObj.refresh();
-										res.data.length < 10 ? pullObj.endPullUpToRefresh(true) : pullObj.endPullUpToRefresh(false);
-									}
-								} else {
-                                    pullObj.endPullUpToRefresh(true)
-								}
-							})
-							ul.setAttribute('data-page', 1);
-						}
-					}
-				})
-			})
-			mui.plusReady(function(){
-				mui(mui('.mui-scroll')[0]).pullToRefresh().pullDownLoading();
-                mui('.mui-slider')[0].addEventListener('slide',function(){
-                	var index=event.detail.slideNumber;
-                	mui(mui('.mui-scroll')[index]).pullToRefresh().pullDownLoading();
-                })
-			})
-		</script>
+        <script src="js/question-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
