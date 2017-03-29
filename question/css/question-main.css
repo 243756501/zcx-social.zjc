@@ -1,0 +1,51 @@
+			.question-body {
+				margin-top: 45px;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #F0AD4E !important;
+				border-bottom: 2px solid #F0AD4E !important;
+			}
+			
+			.slider-bar {
+				background-color: #FFFFFF;
+			}
+			
+			.question-item {
+				padding: 5px;
+				border-bottom: 5px #F2F2F2 solid;
+			}
+			
+			.user-header {
+				margin-right: 10px;
+				width: 40px !important;
+				height: 40px;
+				border-radius: 50%;
+			}
+			
+			.answer-count {
+				margin-right: 10px;
+				color: white;
+				background: #66CC66;
+			}
+			
+			.question-title {
+				font-size: 15px;
+				color: black;
+			}
+			
+			.question-content {
+				line-height: 25px;
+				font-size: 15px;
+				padding-bottom: 5px;
+			}
+			
+			.create-time {
+				font-size: 12px;
+			}
+			
+			.rank-label {
+				padding: 2px 7px;
+				border-radius: 10px;
+				font-size: 10px;
+			}

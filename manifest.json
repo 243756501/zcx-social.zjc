@@ -270,7 +270,24 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/tool/mui.pullToRefresh.material.js",
+					"question/js/question-render.js",
+					"js/tool/mui.pullToRefresh.js",
+					"js/tool/httptool.js",
+					"question/js/question.js",
+					"question/css/question-main.css",
+					"config.js",
+					"css/pull-top-tips.css",
+					"css/appstyle/base.css",
+					"js/tool/app.js",
+					"js/tool/apptools.js",
+					"js/lib/template.js",
+					"js/tool/imgload.js",
+					"js/tool/net_tools.js",
+					"js/tool/md5.min.js",
+					"css/detail.content.css",
+					"js/tool/imgtools.js"
 				],
 				"refer": [],
 				"priority": 0
