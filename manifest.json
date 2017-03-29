@@ -487,7 +487,23 @@
 					"middle/img/middle-mine.png",
 					"middle/img/middle-searchp.png",
 					"middle/img/middle-activity.png",
-					"css/animate/animate.min.css"
+					"css/animate/animate.min.css",
+					"middle/view/js/middle-main.js",
+					"middle/css/middle-main.css",
+					"js/tool/apptools.js"
+				],
+				"refer": [
+					"mall/view/mall-main.html",
+					"forum/view/forum-main.html"
+				],
+				"priority": 0
+			},
+			"mall/view/mall-main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/appstyle/base.css"
 				],
 				"refer": [],
 				"priority": 0

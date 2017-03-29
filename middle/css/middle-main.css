@@ -1,0 +1,14 @@
+.middle-body {
+	margin-top: 45px !important;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.mui-media-body {
+	margin-top: 1%;
+	margin-left: 8%;
+}
+
+.mui-media-body p {
+	margin-top: 5px;
+}

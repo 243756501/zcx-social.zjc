@@ -9,9 +9,8 @@
 				callback: function() {
 					var pullObj = this;
 					var ul = item.getElementsByClassName('mui-table-view')[0];
-					postInfo.page = parseInt(ul.getAttribute('data-page')) + 1;
+					postInfo.page = parseInt(ul.getAttribute('data-page'));
 					postInfo.type = ul.getAttribute('id');
-					console.log(postInfo.page)
 					question.getQuestionList(postInfo, function(res) {
 						if(res.data) {
 							for(var i in res.data) {
@@ -23,7 +22,7 @@
 							pullObj.endPullUpToRefresh(true)
 						}
 					})
-					ul.setAttribute('data-page', postInfo.page);
+					ul.setAttribute('data-page', postInfo.page+1);
 				}
 			},
 			down: {
@@ -32,6 +31,7 @@
 					var ul = item.getElementsByClassName('mui-table-view')[0];
 					postInfo.page = 1;
 					postInfo.type = ul.getAttribute('id');
+					ul.innerHTML="";
 					question.getQuestionList(postInfo, function(res) {
 						if(res.data) {
 							for(var i in res.data) {

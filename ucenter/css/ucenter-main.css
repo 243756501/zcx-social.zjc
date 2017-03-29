@@ -13,6 +13,7 @@
 .unlogin-body
 {
 	background-color: #FFFFFF;
+	overflow: hidden;
 }
 .unlogin-img
 {

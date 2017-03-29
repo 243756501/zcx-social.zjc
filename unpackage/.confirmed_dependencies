@@ -66,7 +66,25 @@
 		"resources": [
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/tool/mui.pullToRefresh.material.js",
+			"question/js/question-render.js",
+			"js/tool/mui.pullToRefresh.js",
+			"js/tool/httptool.js",
+			"question/js/question.js",
+			"question/css/question-main.css",
+			"config.js",
+			"css/pull-top-tips.css",
+			"css/appstyle/base.css",
+			"js/tool/app.js",
+			"js/tool/apptools.js",
+			"js/lib/template.js",
+			"js/tool/imgload.js",
+			"js/tool/net_tools.js",
+			"js/tool/md5.min.js",
+			"css/detail.content.css",
+			"js/tool/imgtools.js",
+			"question/view/js/question-main.js"
 		],
 		"refer": []
 	},
@@ -129,7 +147,15 @@
 		],
 		"refer": [
 			"account/view/account-login.html",
-			"account/view/account-reg.html"
+			"account/view/account-reg.html",
+			"imchat/view/imchat-main.html",
+			"ucenter/view/ucenter-userinfo.html",
+			"ucenter/view/ucenter-score.html",
+			"ucenter/view/ucenter-fans.html",
+			"ucenter/view/ucenter-rank.html",
+			"ucenter/view/ucenter-sign.html",
+			"ucenter/view/ucenter-secure.html",
+			"ucenter/view/ucenter-about.html"
 		]
 	},
 	"weibo/view/weibo-main.html": {
@@ -216,5 +242,52 @@
 			"img/df_big.png"
 		],
 		"refer": []
+	},
+	"imchat/view/imchat-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"fonts/mui.ttf",
+			"js/tool/mui.pullToRefresh.material.js",
+			"js/tool/mui.pullToRefresh.js",
+			"css/pull-top-tips.css",
+			"js/lib/RongIMLib-2.1.3.min.js"
+		]
+	},
+	"ucenter/view/ucenter-userinfo.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.min.js"
+		]
+	},
+	"middle/view/middle-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"fonts/mui.ttf",
+			"middle/img/middle-market.png",
+			"middle/img/middle-forum.png",
+			"middle/img/middle-mine.png",
+			"middle/img/middle-searchp.png",
+			"middle/img/middle-activity.png",
+			"css/animate/animate.min.css",
+			"middle/view/js/middle-main.js",
+			"middle/css/middle-main.css",
+			"js/tool/apptools.js"
+		],
+		"refer": [
+			"mall/view/mall-main.html",
+			"forum/view/forum-main.html"
+		]
+	},
+	"mall/view/mall-main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"css/appstyle/base.css"
+		]
 	}
 }

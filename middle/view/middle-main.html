@@ -8,21 +8,7 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.min.css" />
-		<style>
-			.middle-body {
-				margin-top: 45px;
-				background-color: #FFFFFF;
-			}
-			
-			.mui-media-body {
-				margin-top: 1%;
-				margin-left: 8%;
-			}
-			
-			.mui-media-body p {
-				margin-top: 5px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../css/middle-main.css"/>
 	</head>
 
 	<body>
@@ -69,29 +55,8 @@
 			</ul>
 		</div>
 		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init();
-			var array = ["mall", "forum", "search", "album", "activity"];
-			var i = 0;
-			var listitemShow = function() {
-				var timecount = setInterval(function() {
-					if(i < array.length) {
-						mui('#' + array[i])[0].style.display = "block";	
-						i++
-					}
-					else
-					{
-						clearInterval(timecount);
-						i=0;
-					}
-				}, 800)
-			}
-			var listitemHide = function() {
-				mui('.mui-table-view-cell').each(function(index, item) {
-					item.style.display = "none";
-				})
-			}
-		</script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/middle-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
