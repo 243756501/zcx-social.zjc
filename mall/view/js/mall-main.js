@@ -5,6 +5,7 @@
 	var addGoodsList = function(data) {
 		var li = document.createElement('li');
 		li.id = data.id;
+		li.detail_info=data;
 		li.className = "mui-table-view-cell";
 		li.innerHTML = template('hot_product_script', data);
 		return li;
@@ -53,5 +54,14 @@
 					})
 				}
 			}
+		})
+		mui('.mui-table-view').on('tap','li',function(){
+			var goods=this.detail_info;
+			webtool.openPreView('mall-goods-detail',function(wb){
+				mui.fire(wb,'goodsInfo',{
+					'goodsInfo':goods
+				})
+				wb.show();
+			})
 		})
 	})

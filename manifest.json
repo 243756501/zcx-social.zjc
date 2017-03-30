@@ -532,6 +532,32 @@
 					"mall/css/mall-main.css",
 					"mall/view/js/mall-main.js"
 				],
+				"refer": [
+					"mall/view/mall-goods-detail.html"
+				],
+				"priority": 0
+			},
+			"mall/view/mall-goods-detail.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"account/img/login-background.jpg",
+					"css/appstyle/base.css",
+					"css/icons-extra.css",
+					"js/lib/template.js",
+					"js/tool/apptools.js",
+					"fonts/mui-icons-extra.ttf",
+					"js/tool/imgtools.js",
+					"js/tool/net_tools.js",
+					"css/detail.content.css",
+					"js/tool/md5.min.js",
+					"js/tool/imgload.js",
+					"config.js",
+					"img/df_big.png",
+					"mall/view/js/mall-goods-detail.js",
+					"mall/css/mall-goods-detail.css"
+				],
 				"refer": [],
 				"priority": 0
 			}

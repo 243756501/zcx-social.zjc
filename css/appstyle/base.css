@@ -61,6 +61,7 @@
 .base-pagebody {
 	margin-top: 45px !important;
 	/*background-color: #FFFFFF  !important;*/
+	overflow: hidden;
 }
 
 
