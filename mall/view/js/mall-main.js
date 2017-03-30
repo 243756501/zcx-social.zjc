@@ -64,4 +64,9 @@
 				wb.show();
 			})
 		})
+		mui('.mall-product-type').on('tap','div',function(){
+			webtool.openPreView('mall-goods-list',function(wb){
+				wb.show();
+			})
+		})
 	})

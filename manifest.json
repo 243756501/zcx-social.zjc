@@ -533,7 +533,8 @@
 					"mall/view/js/mall-main.js"
 				],
 				"refer": [
-					"mall/view/mall-goods-detail.html"
+					"mall/view/mall-goods-detail.html",
+					"mall/view/mall-goods-list.html"
 				],
 				"priority": 0
 			},
@@ -557,6 +558,24 @@
 					"img/df_big.png",
 					"mall/view/js/mall-goods-detail.js",
 					"mall/css/mall-goods-detail.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mall/view/mall-goods-list.html": {
+				"resources": [
+					"img/app-logo.png",
+					"img/app-wel.png",
+					"account/img/login-background.jpg",
+					"img/default_avatar.jpg",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"question/img/score-reward.png",
+					"mall/img/mall-slider-img1.jpg",
+					"mall/img/mall-slider-img2.png",
+					"img/df_big.png",
+					"css/appstyle/base.css"
 				],
 				"refer": [],
 				"priority": 0

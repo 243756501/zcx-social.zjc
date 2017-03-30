@@ -130,7 +130,7 @@ repost_view = '<a href="javascript:">' +
 	'</div></a>';
 
 weibo_comment = '<img id="{{user.uid}}" class="user-flag avatar mui-pull-left" data-uid="{{user.uid}}" onload="load(this)" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}">' +
-	'<div class="mui-media-body"><i class="mui-icon mui-icon-chatbubble reply-btn"></i>' +
+	'<div class="mui-media-body"><img src="../img/weibo-item-like.png" class="base-own-icon reply-btn"></i>' +
 	'<p><span class="user-flag" data-uid="{{user.uid}}">{{user.nickname}}</span></p>' +
 	'<div class="txt-xxs"><span class="time">{{create_time}}</span></div>' +
 	'<p class="weibo-comment">{{content}}</p></div>';
