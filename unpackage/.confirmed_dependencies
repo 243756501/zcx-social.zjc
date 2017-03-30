@@ -279,7 +279,8 @@
 		],
 		"refer": [
 			"mall/view/mall-main.html",
-			"forum/view/forum-main.html"
+			"forum/view/forum-main.html",
+			"activity/view/activity-main.html"
 		]
 	},
 	"mall/view/mall-main.html": {
@@ -287,7 +288,33 @@
 			"js/mui.min.js",
 			"css/mui.min.css",
 			"fonts/mui.ttf",
-			"css/appstyle/base.css"
+			"css/appstyle/base.css",
+			"mall/img/mall-slider-img1.jpg",
+			"mall/img/mall-slider-img2.jpg",
+			"mall/img/mall-slider-img2.png",
+			"account/img/login-background.jpg",
+			"mall/img/mall-type-all.png",
+			"mall/img/mall-type-memory.png",
+			"mall/img/mall-type-award.png",
+			"img/default_avatar.jpg",
+			"img/app-logo.png",
+			"img/app-wel.png",
+			"img/weibo_df.png",
+			"mall/img/mall-product-cost.png",
+			"js/lib/template.js",
+			"js/tool/mui.pullToRefresh.js",
+			"js/tool/imgload.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"css/pull-top-tips.css",
+			"js/tool/net_tools.js",
+			"js/tool/apptools.js",
+			"js/tool/mui.pullToRefresh.material.js",
+			"js/tool/md5.min.js",
+			"js/tool/app.js",
+			"mall/js/mall.js",
+			"mall/css/mall-main.css",
+			"mall/view/js/mall-main.js"
 		]
 	}
 }

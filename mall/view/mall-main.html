@@ -1,31 +1,95 @@
 <!doctype html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css"/>
-		<style type="text/css">
-			.mall-body
-			{
-				margin-top: 45px !important;
-				overflow: hidden;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mall-main.css"/>
 	</head>
+
 	<body>
 		<header class="mui-bar mui-bar-nav base-title-header">
-		    <i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
-		    <h1 class="mui-title">积分商城</h1>
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">积分商城</h1>
 		</header>
-		<div class="mall-body mui-fullscreen">
-			
+		<div class="mall-body mui-fullscreen  mui-row">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/mall-slider-img2.png">
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/mall-slider-img1.jpg">
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/mall-slider-img2.png">
+								</a>
+							</div>
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/mall-slider-img1.jpg">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+					<div class="mall-product-type">
+						<div class="mall-product-type-item">
+							<img src="../img/mall-type-all.png" />
+							<span>全部</span>
+						</div>
+						<div class="mall-product-type-item">
+							<img src="../img/mall-type-memory.png" />
+							<span>纪念品</span>
+						</div>
+						<div class="mall-product-type-item">
+							<img src="../img/mall-type-award.png" />
+							<span>奖品</span>
+						</div>
+					</div>
+					<div>
+						<div class="mall-groom-product">
+							热门商品
+						</div>
+						<ul id="mall_goodlist" class="mui-table-view">
+							<!--<li class="mui-table-view-cell">
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
+		</div>
+		<script id="hot_product_script" type="text/html">
+			<img class="mall-product-img" src="../../img/weibo_df.png" data-src="http://upload.opensns.cn/Uploads_Picture_2016-03-31_56fd09832c450.png" onload="load(this)" />
+			<div class="groom-product-info">
+				<span class="groom-product-name">{{goods_name}}</span>
+				<span class="base-grey-font">{{goods_num}}</span>
+				<span><img class="mall-product-costimg" src="../img/mall-product-cost.png"></img><span class="groom-product-cost">{{money_need}}</span></span>
+			</div>
 		</script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mall.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mall-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
-
 </html>
