@@ -190,7 +190,8 @@
 			"css/previewimage.css",
 			"weibo/img/weibo-all.png",
 			"weibo/img/weibo-mine.png",
-			"css/animate/animate.min.css"
+			"css/animate/animate.min.css",
+			"weibo/img/weibo-send.png"
 		],
 		"refer": [
 			"weibo/view/weibo-detail.html"

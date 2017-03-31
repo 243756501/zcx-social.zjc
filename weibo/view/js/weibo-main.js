@@ -55,6 +55,11 @@ var tool = {
 	}
 }
 var initEvent = function() {
+	document.getElementById("weiboSendBtn").addEventListener('tap',function(){
+		webtool.openPreView('weibo-send',function(wb){
+			wb.show();
+		})
+	});
 	//监听用户更改
 	window.addEventListener('userchange', function(e) {
 		var userInfo = e.detail.userInfo;

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css"/>
+		<style type="text/css">
+			.weibo-send-body
+			{
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+		    <i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+		    <h1 class="mui-title">发送微博</h1>
+		    <button id="sendBtn" class="mui-btn mui-btn-green mui-pull-right">发送</button>
+		</header>
+		<div class="base-pagebody">
+			<div class="weibo-send-body">
+				<textarea id="weiboContent" name="" rows="10" cols=""></textarea>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				var weiboContent=document.getElementById("weiboContent");
+				var sendBtn=document.getElementById("sendBtn");
+				
+				sendBtn.addEventListener('tap',function(){
+					
+				})
+			})
+		</script>
+	</body>
+
+</html>
