@@ -13,5 +13,19 @@ var weibo={
 		ajax.request('weibo','GET',function(data){
 			callback(data);
 		})
+	},
+	
+	/*
+	 * 获取评论列表
+	 */
+	getWeiboCommentList:function(postInfo,callback){
+		var id=postInfo.id;
+		var page=postInfo.type || '1';
+		var ajax=new ajaxRequest();
+		ajax.addData('id',id);
+		ajax.addData('page',page);
+		ajax.request('weibo_comment','GET',function(data){
+			callback(data);
+		})
 	}
 }

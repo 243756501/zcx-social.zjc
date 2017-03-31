@@ -5,7 +5,7 @@ var get_weibo_type = function(type) {
 	return eval('type_' + type);
 }
 
-var parse_weibo_html = function(weibo) {
+var parse_weibo_html = function(weibo,newScript) {
 	var long_weibo_render = function(weibo) {
 		if(weibo.type == 'long_weibo') {
 			var richStr = weibo.long_weibo.long_content;
@@ -43,9 +43,17 @@ var parse_weibo_html = function(weibo) {
 	}
 
 	var html_type = weibo_type(weibo);
-	var render = template.compile(base);
-	weibo.fetchContent = html_type;
-	var html = render(weibo);
+	if(newScript)
+	{
+	   weibo.fetchContent = html_type;
+	   html=template(newScript,weibo);
+	}
+	else
+	{
+	   var render = template.compile(base);
+	   weibo.fetchContent = html_type;
+	   var html = render(weibo);
+	}	
 	return html;
 }
 base = '<div class="weibo-item-userinfo-div"><div class="weibo-item-userinfo">'+

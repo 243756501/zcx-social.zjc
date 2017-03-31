@@ -52,3 +52,15 @@
 .weibo-detail-comment-count {
 	margin-bottom: 5%;
 }
+
+.weibo-detail-commentBtn-body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 50px;
+}
+#noComment
+{
+	position: relative;
+	top: 15px;
+}

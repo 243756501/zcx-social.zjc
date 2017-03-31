@@ -20,7 +20,7 @@
 			<i class="mui-spinner"></i>
 		</div>
 		<div class="mui-scroll-wrapper base-pagebody">
-			<div class="mui-scroll">
+			<div id="weibo_scroll" class="mui-scroll">
 			</div>
 		</div>
 		<nav class="weibo-detail-tab mui-bar mui-bar-tab">
@@ -37,7 +37,7 @@
 				<span class="base-grey-font">点赞</span>
 			</div>
 		</nav>
-		<script type="text/html">
+		<script id="weibo_detail_script" type="text/html">
 			<div class="weibo-detail-body">
 				<div class="weibo-item-userinfo-div">
 					<div class="weibo-item-userinfo">
@@ -56,7 +56,7 @@
 						<img class="weibo-detail-coll" src="../../img/collection.png"></img>
 					</div>
 				</div>
-				<div class="weibo-item-content-div">{{fetchContent}}</div>
+				<div id="weiboContent" class="weibo-item-content-div">{{fetchContent}}</div>
 			</div>
 			<div class="weibo-detail-groom-body base-white-background">
 				<span class="base-grey-font">相关推荐</span>
@@ -79,16 +79,29 @@
 			</div>
 			<div class="weibo-detail-comment-body base-white-background">
 				<div class="weibo-detail-comment-count">
-					<span class="base-grey-font">转发</span><span class="base-grey-font weibo-detail-trascount">14</span>
-					<span class="base-grey-font">评论</span><span class="base-grey-font weibo-detail-commcount">374</span>
-					<span class="base-grey-font mui-pull-right weibo-detail-lkcount">123</span><span class="base-grey-font mui-pull-right">赞</span>
+					<span class="base-grey-font">转发</span><span class="base-grey-font weibo-detail-trascount">{{repost_count}}</span>
+					<span class="base-grey-font">评论</span><span class="base-grey-font weibo-detail-commcount">{{comment_count}}</span>
+					<span class="base-grey-font mui-pull-right weibo-detail-lkcount">{{support_count}}</span><span class="base-grey-font mui-pull-right">赞</span>
 				</div>
-				<ul class="mui-table-view">
+				<ul id="weiboCommentUl" class="mui-table-view">
 					<!--<li class="mui-table-view-cell">
 						</li>-->
 				</ul>
+				<div class="weibo-detail-commentBtn-body">
+					<div id="noComment" style="display: none;">没有更多评论</div>
+					<button id="getCommentBtn" type="button" class="mui-btn" style="display: none;">点击加载更多</button>
+				</div>
 			</div>
 		</script>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/weibo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/weibo-render.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgtools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/weibo-detail.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

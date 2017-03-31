@@ -192,7 +192,9 @@
 			"weibo/img/weibo-mine.png",
 			"css/animate/animate.min.css"
 		],
-		"refer": []
+		"refer": [
+			"weibo/view/weibo-detail.html"
+		]
 	},
 	"account/view/account-login.html": {
 		"resources": [
@@ -357,6 +359,33 @@
 			"mall/img/mall-slider-img2.png",
 			"img/df_big.png",
 			"css/appstyle/base.css"
+		]
+	},
+	"weibo/view/weibo-detail.html": {
+		"resources": [
+			"weibo/css/weibo-detail.css",
+			"weibo/css/weibo-main.css",
+			"weibo/view/js/weibo-detail.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"weibo/img/weibo-item-like.png",
+			"css/mui.min.css",
+			"weibo/img/weibo-item-comment.png",
+			"weibo/img/weibo-item-repost.png",
+			"css/appstyle/base.css",
+			"css/detail.content.css",
+			"js/tool/imgload.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"js/tool/imgtools.js",
+			"js/tool/net_tools.js",
+			"js/tool/apptools.js",
+			"js/tool/md5.min.js",
+			"js/tool/app.js",
+			"js/lib/template.js",
+			"img/collection.png",
+			"weibo/js/weibo-render.js",
+			"weibo/js/weibo.js"
 		]
 	}
 }
