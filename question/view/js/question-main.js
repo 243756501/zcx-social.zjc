@@ -51,8 +51,12 @@
 		})
 	})
 	mui(mui('.mui-scroll')[0]).pullToRefresh().pullUpLoading();
-	mui.plusReady(function() {
-		
+	document.getElementById("askBtn").addEventListener('tap',function(){
+		webtool.openPreView('question-send',function(wb){
+			wb.show();
+		})
+	})
+	mui.plusReady(function() {		
 		mui('.mui-slider')[0].addEventListener('slide', function() {
 			var index = event.detail.slideNumber;
 			mui(mui('.mui-scroll')[index]).pullToRefresh().pullDownLoading();

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/question-send.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">提问</h1>
+		</header>
+		<div class="question-main base-pagebody mui-fullscreen">
+			<div class="question-ask-row question-ask-title">
+				<span>标题</span>
+				<input id="askTitle" name="" rows="1" cols=""></input>
+			</div>
+			<div class="question-ask-row question-ask-title">
+				<span>悬赏积分</span>
+				<input id="askScore" name="" rows="1" cols=""></input>
+			</div>
+			<div class="question-ask-title">
+				<div>问题综述</div>
+				<textarea id="askContent" name="" rows="5" cols=""></textarea>
+				<div class="mui-pull-right base-grey-font">还可以输入<span id="fontCount">300</span>字</div>
+			</div>
+			<div class="question-ask-btn-body">
+				<button id="resetBtn" class="mui-btn mui-btn-danger">重置</button>
+				<button id="sendBtn" class="mui-btn mui-btn-green">发布</button>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/question.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/question-send.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

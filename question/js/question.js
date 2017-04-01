@@ -12,4 +12,24 @@ var question={
 			callback(res);
 		})
 	},
+	/*
+	 * 发布问题
+	 */
+	askQuestion:function(postInfo,callback){
+		var open_id;
+		app.getUserInfo(function(res){
+			open_id=res.data.open_id;
+		});
+		var description=postInfo.description;
+		var score_num=postInfo.score_num;
+		var title=postInfo.title;
+		var ajax=new ajaxRequest();
+		ajax.addData('open_id',open_id);
+		ajax.addData('description',description);
+		ajax.addData('score_num',score_num);
+		ajax.addData('title',title);
+		ajax.request('question','POST',function(res){
+			callback(res);
+		})
+	}
 }

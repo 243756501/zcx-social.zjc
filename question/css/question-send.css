@@ -1,0 +1,32 @@
+		.question-main {
+			padding: 15px;
+			background-color: #FFFFFF;
+		}
+		
+		.question-ask-row span {
+			width: 100px;
+		}
+		
+		.question-ask-row {
+			display: flex;
+			align-items: center;
+			margin-bottom: 5%;
+		}
+		
+		#askScore {
+			width: 30%;
+		}
+		
+		#askContent {
+			margin-top: 5%;
+		}
+		
+		.question-ask-btn-body {
+			margin-top: 15%;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.question-ask-btn-body button {
+			width: 40%;
+		}
