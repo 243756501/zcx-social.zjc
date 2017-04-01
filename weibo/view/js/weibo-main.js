@@ -52,13 +52,17 @@ var tool = {
 		})
 		mui('#title_' + type)[0].className = "weibo-type-item-font weibo-type-active";
 		mui.trigger(dom.titleOn, 'tap');
-	}
+	},
 }
 var initEvent = function() {
-	document.getElementById("weiboSendBtn").addEventListener('tap',function(){
-		webtool.openPreView('weibo-send',function(wb){
-			wb.show();
-		})
+	document.getElementById("weiboSendBtn").addEventListener('tap', function() {
+		if(app.isLogin()) {
+			webtool.openPreView('weibo-send', function(wb) {
+				wb.show();
+			})
+		}else{
+		    mui.toast('登录后操作！');	
+		}
 	});
 	//监听用户更改
 	window.addEventListener('userchange', function(e) {
@@ -78,20 +82,18 @@ var initEvent = function() {
 		dom.weiboUl.innerHTML = "";
 		if(type == "user") {
 			app.getUserInfo(function(userInfo) {
-				var uid=userInfo.data_1.uid;
-				postInfo.type="user";
-				postInfo.uid=uid;
-				postInfo.page=1;
+				var uid = userInfo.data_1.uid;
+				postInfo.type = "user";
+				postInfo.uid = uid;
+				postInfo.page = 1;
 			})
-		}
-		else
-		{   
-			postInfo.type=type;
-			postInfo.page=1;
+		} else {
+			postInfo.type = type;
+			postInfo.page = 1;
 		}
 		tool.changeTypeColor(type);
 		mui('.mui-content .mui-scroll').pullToRefresh().pullDownLoading();
-		
+
 	});
 }
 mui.plusReady(function() {
@@ -143,10 +145,10 @@ mui.plusReady(function() {
 		}
 	});
 	mui('.mui-content .mui-scroll').pullToRefresh().pullDownLoading();
-	mui('#weiboUl').on('tap','li',function(){
-		var weiboInfo=this.detail_info;
-		webtool.openPreView('weibo-detail',function(wb){
-			mui.fire(wb,'weiboInfo',{
+	mui('#weiboUl').on('tap', 'li', function() {
+		var weiboInfo = this.detail_info;
+		webtool.openPreView('weibo-detail', function(wb) {
+			mui.fire(wb, 'weiboInfo', {
 				'weiboInfo': weiboInfo
 			})
 			wb.show();

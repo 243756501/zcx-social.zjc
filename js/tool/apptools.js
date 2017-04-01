@@ -130,6 +130,13 @@ var apptools = {
 	fmtUnixTime: function(unixTime, type) {
 		return apptools.friendlyDate(unixTime);
 	},
+	/*
+	 * 获取当前手机类型
+	 */
+	getPhoneType:function()
+	{
+		return plus.device.model;
+	}
 };
 
 //页面辅助方法

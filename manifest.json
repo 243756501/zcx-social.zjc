@@ -401,7 +401,8 @@
 					"weibo/img/weibo-send.png"
 				],
 				"refer": [
-					"weibo/view/weibo-detail.html"
+					"weibo/view/weibo-detail.html",
+					"weibo/view/weibo-send.html"
 				],
 				"priority": 0
 			},
@@ -608,6 +609,21 @@
 					"img/collection.png",
 					"weibo/js/weibo-render.js",
 					"weibo/js/weibo.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"weibo/view/weibo-send.html": {
+				"resources": [
+					"weibo/js/weibo.js",
+					"js/tool/apptools.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/tool/httptool.js",
+					"config.js",
+					"css/appstyle/base.css",
+					"js/tool/app.js"
 				],
 				"refer": [],
 				"priority": 0

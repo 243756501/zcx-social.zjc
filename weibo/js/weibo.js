@@ -27,5 +27,26 @@ var weibo={
 		ajax.request('weibo_comment','GET',function(data){
 			callback(data);
 		})
+	},
+	
+	/*
+	 * 发布微博
+	 */
+	sendWeibo:function(postInfo,callback){
+		var content=postInfo.content;
+		var phonetype=postInfo.phonetype;
+		var type=postInfo.type;//目前只支持文字
+		var open_id;
+		app.getUserInfo(function(res){
+			open_id=res.data.open_id;
+		})
+		var ajax=new ajaxRequest();
+		ajax.addData('content',content);
+		ajax.addData('from',phonetype);
+		ajax.addData('type',type);
+		ajax.addData('open_id',open_id);
+		ajax.request('weibo','POST',function(data){
+			callback(data);
+		})
 	}
 }
