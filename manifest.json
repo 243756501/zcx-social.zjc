@@ -502,7 +502,8 @@
 				"refer": [
 					"mall/view/mall-main.html",
 					"forum/view/forum-main.html",
-					"activity/view/activity-main.html"
+					"activity/view/activity-main.html",
+					"search/view/search-main.html"
 				],
 				"priority": 0
 			},
@@ -626,7 +627,8 @@
 					"js/tool/httptool.js",
 					"config.js",
 					"css/appstyle/base.css",
-					"js/tool/app.js"
+					"js/tool/app.js",
+					"weibo/view/js/weibo-send.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -642,7 +644,26 @@
 					"question/js/question.js",
 					"config.js",
 					"js/tool/app.js",
-					"question/view/js/question-send.js"
+					"question/view/js/question-send.js",
+					"question/css/question-send.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"search/view/search-main.html": {
+				"resources": [
+					"js/lib/template.js",
+					"js/tool/apptools.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/tool/httptool.js",
+					"config.js",
+					"css/appstyle/base.css",
+					"js/tool/app.js",
+					"js/tool/mui.pullToRefresh.material.js",
+					"js/tool/mui.pullToRefresh.js",
+					"css/pull-top-tips.css"
 				],
 				"refer": [],
 				"priority": 0
