@@ -15,7 +15,7 @@ var userItem = '<img onload="load(this)" src="../../img/default_avatar.jpg" data
 '<button style="color:#007AFF" class="li-btn"><span class="icon-user-plus"></span><div style="font-size: 12px;">加关注</div></button>{{else}}'+
 '<button class="li-btn"><span class="icon-user-check"></span><div style="font-size: 12px;">已关注</div></button>{{/if}}</div></div>';
 
-var near = '<img onload="load(this)" src="../../images/default_avatar.jpg" data-src="{{user.avatar128}}" style="width: 50px;height: 50px;" data-uid="{{user.uid}}" class="mui-pull-left user-flag" />'+
+var near = '<img onload="load(this)" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}" style="width: 50px;height: 50px;" data-uid="{{user.uid}}" class="mui-pull-left user-flag" />'+
 	'<div class="mui-media-body">'+
 		'<p class="mui-ellipsis event-title">{{user.nickname}} </p>'+
 		'<p>{{distance}}米以内 &nbsp;&nbsp;'+

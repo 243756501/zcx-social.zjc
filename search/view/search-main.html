@@ -7,26 +7,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css"/>
-		<style type="text/css">
-			.base-pagebody {
-				margin: 0 5%;
-			}
-			
-			.search-container {
-				margin: 5% 0;
-				display: flex;
-			}
-			
-			.search-btn {
-				margin: 0 0 0 5%;
-				height: 50%;
-			}
-			
-			.groom-people-ul {
-				margin-top: 5%;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icomoon.css" />
+		<link rel="stylesheet" type="text/css" href="../css/search-main.css"/>
 	</head>
 
 	<body>
@@ -38,57 +21,27 @@
 			<div class="mui-scroll">
 				<div class="base-pagebody">
 					<div class="search-container">
-						<input type="search" class="base-white-background search-input" name="" required="" placeholder="搜索好友" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
-						<button class="search-btn mui-btn mui-btn-green">搜索</button>
+						<input id="searchText" type="search" class="base-white-background search-input" name="" required="" placeholder="搜索好友" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
+						<button id="searchBtn" class="search-btn mui-btn mui-btn-green">搜索</button>
 					</div>
 					<div class="groom-people-container">
 						<span class="base-grey-font">距离只差一次点击</span>
-						<ul  id="peopleList" class="groom-people-ul mui-table-view">
-							<!--<li class="mui-table-view-cell">       
-					</li>-->					
+						<ul id="peopleList" class="groom-people-ul mui-table-view">
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
-		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/search-render.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/search.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			mui.init();
-			var postInfo={};
-			var peopleList=document.getElementById("peopleList");
-			mui('.mui-scroll').pullToRefresh({
-				up:{
-					callback:function()
-					{
-						
-					}
-				},
-				down:{
-					callback:function()
-					{
-						search.getAllFridents(function(res){
-							if(res.data)
-						    {
-						    	for(i in res.data)
-						    	{
-						    		
-						    	}
-						    }
-						    else
-						    {
-						    	peopleList.innerHTML="<div class="mui-text-center">没有朋友推荐</div>";
-						    }
-						})
-					}
-				}
-			})
-		</script>
+		<script src="js/search-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

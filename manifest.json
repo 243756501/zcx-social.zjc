@@ -663,7 +663,16 @@
 					"js/tool/app.js",
 					"js/tool/mui.pullToRefresh.material.js",
 					"js/tool/mui.pullToRefresh.js",
-					"css/pull-top-tips.css"
+					"css/pull-top-tips.css",
+					"search/view/js/search-main.js",
+					"fonts/icomoon.ttf",
+					"search/js/search-render.js",
+					"css/icomoon.css",
+					"search/css/search-main.css",
+					"search/js/search.js",
+					"js/tool/imgload.js",
+					"js/tool/net_tools.js",
+					"js/tool/md5.min.js"
 				],
 				"refer": [],
 				"priority": 0
