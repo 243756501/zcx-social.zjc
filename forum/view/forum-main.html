@@ -6,12 +6,152 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css"/>
+		<style type="text/css">
+			#sliderProgressBar {
+				background-color: #EC971F;
+			}
+			
+			.forum-nav .mui-active {
+				color: #EC971F !important;
+			}
+			
+			.forum-slider-item {
+				display: flex;
+			}
+			
+			.item-left-container {
+				height: 60px;
+			}
+			
+			.item-left-avatar {
+				width: 60px !important;
+				margin-right: 30px;
+			}
+			
+			.item-right-container {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.item-right-down {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.item-publishtime {
+				margin-left: 10px;
+			}
+		</style>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav base-title-header base-head-combine">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">论坛</h1>
+			<i class="mui-icon mui-pull-right mui-icon-compose"></i>
+		</header>
+		<div class="base-pagebody mui-fullscreen">
+			<div class="mui-slider mui-fullscreen">
+				<div class="forum-nav base-white-background mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1">最新回复</a>
+					<a class="mui-control-item" href="#item2">最新帖子</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+				<div class="mui-slider-group">
+					<div id="item1" class="mui-slider-item mui-control-content mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<!--<li class="forum-slider-item mui-table-view-cell">									
+							       </li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/html">
+			<div class="item-left-container">
+				<img class="item-left-avatar" src="../../img/default_avatar.jpg" />
+			</div>
+			<div class="item-right-container">
+				<div class="item-right-top">
+					<h4 class="mui-ellipsis">显示标题哟</h1>			
+				</div>
+			    <div class="item-right-down">
+			        <span class="base-grey-font">author</span>
+			        <div class="item-otherInfo">
+			            <i class="base-grey-font mui-icon mui-icon-chat"></i>
+			            <span class="base-grey-font">0</span>
+			            <span class="item-publishtime base-grey-font">16分钟前</span>
+			        </div>
+			    </div>
+			</div>
+		</script>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/forum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			var postInfo={
+				'order':'reply',
+				'page':'1'
+			}
+			var addForumDataList=function(data){
+				var li=document.createElement('li');
+				li.className="forum-slider-item mui-table-view-cell";
+				li.id=data.id;
+				return li;
+			}
+			mui.plusReady(function(){
+				mui.each(document.querySelectorAll('.mui-scroll'),function(index,item){
+					mui(item).pullToRefresh({
+					up:{
+						callback:function(){
+//							var pullObj=this;
+//							forum.getForumList(postInfo,function(res){
+//								if(res.data)
+//								{
+//									for(i in res.data)
+//									{
+//										var li = addForumDataList(res.data[i]);
+//										
+//									}
+//								}
+//								else
+//								{
+//									pullObj.endPullUpToRefresh(true);
+//									mui.toast(res.info);								
+//								}
+//							})						
+						}
+					},
+					down:{
+						callback:function(){
+							
+						}
+					}
+				})
+				})
+			})
 		</script>
 	</body>
 
