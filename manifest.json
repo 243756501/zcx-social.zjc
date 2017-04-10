@@ -478,7 +478,12 @@
 			"ucenter/view/ucenter-userinfo.html": {
 				"resources": [
 					"css/mui.min.css",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/appstyle/base.css",
+					"js/lib/template.js",
+					"js/tool/apptools.js",
+					"js/tool/app.js"
 				],
 				"refer": [],
 				"priority": 0
