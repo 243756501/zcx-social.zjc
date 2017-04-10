@@ -1,0 +1,43 @@
+			#sliderProgressBar {
+				background-color: #EC971F;
+			}
+			
+			.forum-nav .mui-active {
+				color: #EC971F !important;
+			}
+			
+			.forum-slider-item {
+				display: flex;
+			}
+			
+			.item-left-container {
+				height: 60px;
+			}
+			
+			.item-left-avatar {
+				width: 60px !important;
+				margin-right: 30px;
+			}
+			
+			.item-right-container {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.item-right-down {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.item-publishtime {
+				margin-left: 10px;
+			}
+			
+			.item-otherInfo {
+				width: 60%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}

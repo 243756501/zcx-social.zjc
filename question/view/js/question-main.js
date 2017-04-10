@@ -59,6 +59,9 @@
 	mui.plusReady(function() {		
 		mui('.mui-slider')[0].addEventListener('slide', function() {
 			var index = event.detail.slideNumber;
-			mui(mui('.mui-scroll')[index]).pullToRefresh().pullDownLoading();
+			if(mui('.mui-scroll')[index].getElementsByClassName('mui-table-view')[0].innerHTML=="")
+			{
+				mui(mui('.mui-scroll')[index]).pullToRefresh().pullDownLoading();
+			}		
 		})
 	})

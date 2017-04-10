@@ -7,45 +7,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css"/>
-		<style type="text/css">
-			#sliderProgressBar {
-				background-color: #EC971F;
-			}
-			
-			.forum-nav .mui-active {
-				color: #EC971F !important;
-			}
-			
-			.forum-slider-item {
-				display: flex;
-			}
-			
-			.item-left-container {
-				height: 60px;
-			}
-			
-			.item-left-avatar {
-				width: 60px !important;
-				margin-right: 30px;
-			}
-			
-			.item-right-container {
-				display: flex;
-				width: 100%;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-			
-			.item-right-down {
-				display: flex;
-				justify-content: space-between;
-			}
-			
-			.item-publishtime {
-				margin-left: 10px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<link rel="stylesheet" type="text/css" href="../css/forum-main.css"/>
 	</head>
 
 	<body>
@@ -65,7 +28,7 @@
 					<div id="item1" class="mui-slider-item mui-control-content mui-active">
 						<div class="mui-scroll-wrapper">
 							<div class="mui-scroll">
-								<ul class="mui-table-view">
+								<ul data-page="0" type="reply" class="mui-table-view">
 									<!--<li class="forum-slider-item mui-table-view-cell">									
 							       </li>-->
 								</ul>
@@ -75,7 +38,7 @@
 					<div id="item2mobile" class="mui-slider-item mui-control-content">
 						<div class="mui-scroll-wrapper">
 							<div class="mui-scroll">
-								<ul class="mui-table-view">
+								<ul data-page="0" type="ctime" class="mui-table-view">
 								</ul>
 							</div>
 						</div>
@@ -83,20 +46,22 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/html">
+		<script id="forum_item_script" type="text/html">
 			<div class="item-left-container">
-				<img class="item-left-avatar" src="../../img/default_avatar.jpg" />
+				<img class="item-left-avatar" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}" onload=" load(this) " />
 			</div>
 			<div class="item-right-container">
 				<div class="item-right-top">
-					<h4 class="mui-ellipsis">显示标题哟</h1>			
+					<h4 class="mui-ellipsis">{{title}}</h1>			
 				</div>
 			    <div class="item-right-down">
-			        <span class="base-grey-font">author</span>
+			        <span class="base-grey-font">{{user.nickname}}</span>
 			        <div class="item-otherInfo">
-			            <i class="base-grey-font mui-icon mui-icon-chat"></i>
-			            <span class="base-grey-font">0</span>
-			            <span class="item-publishtime base-grey-font">16分钟前</span>
+			        	<div class="reply-container">
+			        		<i class="base-grey-font mui-icon mui-icon-chat"></i>
+			                <span class="reply-count base-grey-font">{{reply_count}}</span>  
+			        	</div>			        	         
+			            <span class="item-publishtime base-grey-font">{{update_time}}</span>
 			        </div>
 			    </div>
 			</div>
@@ -109,50 +74,7 @@
 		<script src="../js/forum.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			mui.init();
-			var postInfo={
-				'order':'reply',
-				'page':'1'
-			}
-			var addForumDataList=function(data){
-				var li=document.createElement('li');
-				li.className="forum-slider-item mui-table-view-cell";
-				li.id=data.id;
-				return li;
-			}
-			mui.plusReady(function(){
-				mui.each(document.querySelectorAll('.mui-scroll'),function(index,item){
-					mui(item).pullToRefresh({
-					up:{
-						callback:function(){
-//							var pullObj=this;
-//							forum.getForumList(postInfo,function(res){
-//								if(res.data)
-//								{
-//									for(i in res.data)
-//									{
-//										var li = addForumDataList(res.data[i]);
-//										
-//									}
-//								}
-//								else
-//								{
-//									pullObj.endPullUpToRefresh(true);
-//									mui.toast(res.info);								
-//								}
-//							})						
-						}
-					},
-					down:{
-						callback:function(){
-							
-						}
-					}
-				})
-				})
-			})
-		</script>
+		<script src="js/forum-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
