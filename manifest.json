@@ -695,7 +695,37 @@
 					"js/tool/md5.min.js",
 					"js/tool/app.js",
 					"forum/js/forum.js",
-					"css/pull-top-tips.css"
+					"css/pull-top-tips.css",
+					"forum/css/forum-main.css",
+					"forum/view/js/forum-main.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"activity/view/activity-main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/appstyle/base.css",
+					"img/default_avatar.jpg",
+					"activity/js/activity.js",
+					"js/lib/template.js",
+					"js/tool/imgload.js",
+					"js/tool/httptool.js",
+					"css/pull-top-tips.css",
+					"config.js",
+					"js/tool/net_tools.js",
+					"js/tool/apptools.js",
+					"js/tool/md5.min.js",
+					"js/tool/app.js",
+					"js/tool/mui.pullToRefresh.js",
+					"js/tool/mui.pullToRefresh.material.js",
+					"css/detail.content.css",
+					"js/tool/imgtools.js",
+					"img/df_big.png",
+					"activity/css/activity-main.css",
+					"activity/view/js/activity-main.js"
 				],
 				"refer": [],
 				"priority": 0

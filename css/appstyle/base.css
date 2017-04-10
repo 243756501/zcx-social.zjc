@@ -127,3 +127,11 @@
 {
 	background: #FFFFFF !important;
 }
+/*
+ * 圆形头像标准大小
+ */
+.base-avatar-small
+{
+	width: 60px;
+	border-radius: 50%;
+}

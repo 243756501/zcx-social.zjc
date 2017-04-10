@@ -6,13 +6,60 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<link rel="stylesheet" type="text/css" href="../css/activity-main.css"/>
 	</head>
 
 	<body>
-		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">精彩活动</h1>
+		</header>
+		<div class="mui-scroll-wrapper base-pagebody">
+			<div class="mui-scroll base-listview-scroll">
+				<ul id="activityUl" class="mui-table-view base-listview-ul">
+					<!--<li class="mui-table-view-cell">
+					</li>-->
+				</ul>
+			</div>
+		</div>
+		<script id="activity_item_script" type="text/html">
+			<div class="activity-li-top">
+				<div class="activity-userInfo">
+					<img class="base-avatar-small" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}" onload="load(this)" />
+					<div class="userInfo-container">
+						<span class="activity-nickname">{{user.nickname}}</span>
+						<span class="activity-rank">{{user.rank_link[0].label_content}}</span>
+					</div>
+				</div>
+				<div class="activity-addressInfo">{{address}}</div>
+			</div>
+			<div id="activity_content" class="activity-li-middle">
+			</div>
+			<div class="activity-li-bottom">
+				<div class="activity-time-container">
+					<span class="base-grey-font">{{stime}}</span>
+					<span class="base-grey-font">截止时间：{{deadline}}</span>
+				</div>
+				<div class="activity-button-container">
+					{{if is_pass==0}}
+					<button id="endBtn" class="activity-buttom mui-btn mui-btn-danger">报名截止</button> {{else}} {{if is_Attend==0}}
+					<button id="joinBtn" class="activity-buttom mui-btn mui-btn-green">立即报名</button> {{else}}
+					<button id="cancelBtn" class="activity-buttom mui-btn mui-btn-grey">取消报名</button> {{/if}} {{/if}}
+				</div>
+			</div>
 		</script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgtools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/activity.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="js/activity-main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

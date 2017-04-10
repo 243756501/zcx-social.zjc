@@ -1,0 +1,49 @@
+			.activity-li-top {
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 1px solid #EEEEEE;
+				padding-bottom: 2%;
+			}
+			
+			.activity-userInfo {
+				display: flex;
+				align-items: center;
+			}
+			
+			.userInfo-container {
+				margin-left: 5%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.activity-li-middle {
+				margin: 5% 0;
+				padding-bottom: 5%;
+				border-bottom: 1px solid #EEEEEE;
+			}
+			
+			.activity-time-container {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.activity-li-bottom {
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.activity-button-container {
+				margin-top: 5%;
+				float: right;
+			}
+			
+			.activity-nickname {
+				font-size: 14px;
+				width: 100px;
+			}
+			
+			.activity-rank {
+				font-size: 14px;
+				width: 50px;
+			}
