@@ -30,7 +30,18 @@ var initEvent = function() {
 		apptools.changePage(dom.loginBody, dom.unloginBody, true);
 	});
 	mui('.ucenter-bottom-container').on('tap','button',function(e){
-		webtool.openPreView(html_attach[this.id],function(wb){
+		var tapObj=this.id;
+		webtool.openPreView(html_attach[tapObj],function(wb){
+			if(tapObj=='ucInfo')
+			{
+				var userInfo;
+				app.getUserInfo(function(res){
+					userInfo=res;
+				})
+				mui.fire(wb,'userchange',{
+					'userInfo': userInfo
+				})
+			}
 			wb.show('slide-in-right');
 		})
 	});

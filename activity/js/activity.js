@@ -6,7 +6,10 @@ var activity={
 		var page=postInfo.page;
 		var open_id;
 		app.getUserInfo(function(res){
-			open_id=res.data.open_id;
+			if(res)
+			{
+				open_id=res.data.open_id;
+			}			   
 		})
 		var ajax=new ajaxRequest();
 		ajax.addData('page',page);

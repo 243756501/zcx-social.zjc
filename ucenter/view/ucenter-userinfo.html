@@ -7,83 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
-		<style>
-			.user-info-view {
-				height: 130px;
-				width: 100%;
-			}
-			
-			.user-info-page {
-				background: white;
-			}
-			
-			.info-bg-view {
-				position: absolute;
-				width: 100%;
-				height: 130px;
-			}
-			
-			.user-info-view .info-view {
-				position: relative;
-			}
-			
-			.user-info-view .text-view {
-				text-align: right;
-				padding: 10px 10px;
-				color: white;
-			}
-			
-			.user-info-view .user-header {
-				margin: 20px 10px;
-				width: 70px !important;
-				height: 70px !important;
-			}
-			
-			.user-info-view .follow-btn {
-				margin-bottom: 10px;
-			}
-			
-			.user-info-view .follow-btn a {
-				border-radius: 2px;
-				padding: 5px 5px 2px 5px;
-				color: #FFF;
-			}
-			
-			.user-info-view .ucenter-name {
-				margin-bottom: 25px;
-				line-height: 40px;
-				font-size: 21px;
-			}
-			
-			.user-info-view .count div {
-				display: inline-block;
-				font-size: 14px;
-				margin-left: 15px;
-			}
-			
-			.user-info-page .mui-table-view {
-				padding: 10px 5px 5px 10px;
-			}
-			
-			.weibo-item .expression_img {
-				width: initial !important;
-			}
-			
-			.table-part-line {
-				height: 15px;
-				background: #EFEFF4;
-			}
-			
-			.mui-bar~.mui-pull-top-tips {
-				top: 160px;
-			}
-			
-			.ucenter-explain
-			{
-				background-color: #FFFFFF;
-				padding: 3%;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../css/ucenter-userinfo.css"/>
 	</head>
 
 	<body>
@@ -95,30 +19,24 @@
 			<i class="mui-spinner"></i>
 		</div>-->
 		<div id="usercenter-content" class="base-pagebody" style="display: block;">
-			<div id="Info" class="user-info-view"></div>		
+			<div id="Info" class="user-info-view">
+			</div>		
 			<div class="ucenter-mainInfo">
 				<div class="ucenter-explain mui-text-center">
 					其他资料
 				</div>
 				<div id="bottomInfo">
-					dd
 				</div>
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/tool/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ucenter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ucenter-render.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			mui.init();
-			var topInfo=document.getElementById("Info");
-			var bottomInfo=document.getElementById("bottomInfo");
-			mui.plusReady(function(){
-				app.getUserInfo(function(res){
-					
-				})
-			})
-		</script>
+		<script src="js/ucenter-userinfo.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

@@ -5,7 +5,7 @@ var ucenter={
 	getUserInfo:function(postInfo,callback){
 		var uid=postInfo.uid;
 		var ajax=new ajaxRequest();
-		ajax.request('user/'+uid,'POST',function(res){
+		ajax.request('user/'+uid,'GET',function(res){
 			callback(res);
 		})
 	}

@@ -270,7 +270,14 @@
 			"css/appstyle/base.css",
 			"js/lib/template.js",
 			"js/tool/apptools.js",
-			"js/tool/app.js"
+			"js/tool/app.js",
+			"ucenter/js/ucenter-render.js",
+			"ucenter/js/ucenter.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"ucenter/img/ucenter-background.jpg",
+			"ucenter/css/ucenter-userinfo.css",
+			"ucenter/view/js/ucenter-userinfo.js"
 		]
 	},
 	"middle/view/middle-main.html": {
