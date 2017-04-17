@@ -145,7 +145,7 @@ mui.plusReady(function() {
 		}
 	});
 	mui('.mui-content .mui-scroll').pullToRefresh().pullDownLoading();
-	mui('#weiboUl').on('tap', 'li', function() {
+	mui('body').on('tap', 'li', function(e) {
 		var weiboInfo = this.detail_info;
 		webtool.openPreView('weibo-detail', function(wb) {
 			mui.fire(wb, 'weiboInfo', {
@@ -154,4 +154,5 @@ mui.plusReady(function() {
 			wb.show();
 		})
 	})
+    app.gotoUserInfo();
 });

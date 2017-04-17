@@ -29,7 +29,33 @@ var app={
 		{
 			return true;
 		}
-	}
+	},
+	/*
+	 * @author:zhuchenxi
+	 * @describe:点击用户头像进入用户中心
+	 * @param:{className:绑定对象的class属性值}
+	 */
+	gotoUserInfo:function(target)
+	{
+		var target=target || '.userflag';
+		mui('body').on('tap','.userflag',function(event){
+//			event.stopPropagation();//防止事件冒泡		
+			var uid=this.getAttribute('data-uid');
+			if(!uid || uid=='0')
+			{
+				mui.toast('该用户已经不存在！')
+				return false;
+			}
+			webtool.openPreView('../../ucenter/view/ucenter-userinfo',function(wb){
+				mui.fire(wb,'usersubmit',{
+					'uid': uid
+				})
+				wb.show();
+			})
+			return false;
+		})
+		return false;
+	},
 }
 
 /*

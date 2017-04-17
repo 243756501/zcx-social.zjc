@@ -198,7 +198,8 @@
 		],
 		"refer": [
 			"weibo/view/weibo-detail.html",
-			"weibo/view/weibo-send.html"
+			"weibo/view/weibo-send.html",
+			"ucenter/view/ucenter-userinfo.html"
 		]
 	},
 	"account/view/account-login.html": {

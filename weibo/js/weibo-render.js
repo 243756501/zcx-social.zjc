@@ -57,7 +57,7 @@ var parse_weibo_html = function(weibo,newScript) {
 	return html;
 }
 base = '<div class="weibo-item-userinfo-div"><div class="weibo-item-userinfo">'+
-'<div class="weibo-item-avatar-div"><img class="weibo-item-avatar" src="../../img/default_avatar.jpg"  data-src="{{user.avatar128}}" onload="load(this)"/></div>'+
+'<div class="weibo-item-avatar-div"><img class="weibo-item-avatar userflag" src="../../img/default_avatar.jpg"  data-uid={{uid}}  data-src="{{user.avatar128}}" onload="load(this)"/></div>'+
 '<div class="weibo-item-info-div"><span class="weibo-item-nickname mui-ellipsis">{{if user.nickname}}{{user.nickname}}{{else}}咸鱼{{/if}}</span><div class="weibo-item-mobile-div"><span class="base-grey-font weibo-item-sendtime">{{create_time}}</span><span class="base-grey-font weibo-item-from">{{from}}</span></div></div></div>'+
 '<div class="weibo-item-complain"><a class="mui-icon mui-icon-arrowdown" href="#reportPopover"></a></div></div><div class="weibo-item-content-div">{{fetchContent}}</div>'+
 '<div class="weibo-item-other-div"><div class="weibo-item-other-item weibo-item-transmit"><img class="base-own-icon" src="../img/weibo-item-repost.png"></img><span class="base-grey-font">{{repost_count}}</span></div>'+
