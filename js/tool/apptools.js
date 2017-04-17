@@ -31,6 +31,19 @@ var apptools = {
 			}, 1)
 
 		})
+		mui('body').on('tap','a',function(){
+			setTimeout(function() {
+				mui(dom).each(function(index) {
+					var active = this.className;
+					//判断如果是激活的状态
+					if(active == 'mui-control-item mui-active') {
+						this.style.cssText = "border-bottom: 2px solid #F0AD4E;color:#F0AD4E";
+					} else {
+						this.style.cssText = "border-bottom: 2px solid #FFFFFF;color:color: #808080"
+					}
+				})
+			}, 1)
+		})
 	},
 	/*
 	 * 两个dom的显示&隐藏

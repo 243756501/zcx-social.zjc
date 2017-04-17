@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header base-head-combine">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">我的地带</h1>
+		</header>
+		<div class="base-pagebody base-white-background mui-fullscreen">
+			<div id="albumSlider" class="mui-slider mui-fullscreen">
+				<div id="albumNav" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1">全部</a>
+				</div>
+				<div id="sliderGroup" class="mui-slider-group">
+					<div id="item1" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul type="0" data-page="1" class="mui-table-view">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script id="scroll_ul_script" type="text/html">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul type="{{id}}" data-page="1" class="mui-table-view">
+					</ul>
+				</div>
+			</div>
+		</script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/album-main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			apptools.ownactiveStyle('#albumNav a', 'albumSlider');
+			var albumNav = document.getElementById("albumNav");
+			var sliderGroup = document.getElementById("sliderGroup");
+			var postInfo={};
+			var addNavData = function(data, callback) {
+				var a = document.createElement('a');
+				a.className = "mui-control-item";
+				a.innerHTML = data.title;
+				var ahref = "#item" + data.id;
+				a.href = ahref;
+				albumNav.appendChild(a);
+				callback(ahref);
+			}
+			mui.plusReady(function() {
+				album.getAlbumType(function(res) {
+					if(res.data) {
+						for(i in res.data) {
+							addNavData(res.data[i], function(index) {
+								var div = document.createElement('div');
+								div.className = "mui-slider-item mui-control-content";
+								div.id = index;
+								div.innerHTML = template('scroll_ul_script', res.data[i]);
+								sliderGroup.appendChild(div);
+								mui.each(document.querySelectorAll('.mui-scroll'), function(index, item) {
+									mui(item).pullToRefresh({
+										up: {
+											callback: function() {   
+											}
+										},
+										down: {
+											callback: function() {
+											}
+										}
+									})
+								})
+							});
+						}
+					} else {
+						mui.toast('专辑分类获取失败...')
+					}
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

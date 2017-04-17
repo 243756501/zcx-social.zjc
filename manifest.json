@@ -516,7 +516,8 @@
 					"mall/view/mall-main.html",
 					"forum/view/forum-main.html",
 					"activity/view/activity-main.html",
-					"search/view/search-main.html"
+					"search/view/search-main.html",
+					"album/view/album-main.html"
 				],
 				"priority": 0
 			},
@@ -739,6 +740,25 @@
 					"img/df_big.png",
 					"activity/css/activity-main.css",
 					"activity/view/js/activity-main.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"album/view/album-main.html": {
+				"resources": [
+					"album/js/album-main.js",
+					"js/lib/template.js",
+					"js/tool/apptools.js",
+					"js/tool/mui.pullToRefresh.material.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"js/tool/mui.pullToRefresh.js",
+					"css/mui.min.css",
+					"js/tool/httptool.js",
+					"config.js",
+					"css/pull-top-tips.css",
+					"css/appstyle/base.css",
+					"js/tool/app.js"
 				],
 				"refer": [],
 				"priority": 0
