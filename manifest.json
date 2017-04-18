@@ -686,7 +686,8 @@
 					"search/js/search.js",
 					"js/tool/imgload.js",
 					"js/tool/net_tools.js",
-					"js/tool/md5.min.js"
+					"js/tool/md5.min.js",
+					"img/default_avatar.jpg"
 				],
 				"refer": [],
 				"priority": 0
@@ -776,6 +777,16 @@
 					"css/appstyle/base.css",
 					"img/app-logo.png",
 					"js/tool/apptools.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"ucenter/view/ucenter-fans.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/appstyle/base.css"
 				],
 				"refer": [],
 				"priority": 0

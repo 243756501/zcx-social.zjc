@@ -6,12 +6,54 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<style>
+			.uf-li {
+				display: flex;
+				align-items: center;
+			}
+			
+			.uf-li-right {
+				margin-left: 10%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		</style>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">粉丝</h1>
+		</header>
+		<div class="mui-scroll-wrapper base-pagebody">
+			<div class="mui-scroll">
+				<ul class="mui-table-view">
+					<!--<li class="uf-li mui-table-view-cell">
+					</li>-->
+				</ul>
+			</div>
+		</div>
+		<script type="text/html">
+			<div class="uf-li-left">
+				<img class="base-avatar-small" src="../../img/default_avatar.jpg" data-src="{{avatar128}}" onload="load(this)" />
+			</div>
+			<div class="uf-li-right">
+				<div class="fans-info">
+					{{nickname}}
+				</div>
+				<div class="base-grey-font fans-rank">
+					{{title}}
+				</div>
+				<div class="fans-rank">
+					{{if signature}} {{signature}} {{else}} 暂无个性签名 {{/if}}
+				</div>
+			</div>
+		</script>
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
 		</script>
 	</body>
 

@@ -7,24 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
-		<style>
-			.ua-logo-container {
-				margin: 10% 0;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			
-			.ua-logo {
-				width: 50%;
-			}
-			
-			.ua-li {
-				padding: 5%;
-				display: flex;
-				justify-content: space-between;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../css/ucenter-about.css"/>
 	</head>
 
 	<body>
@@ -53,42 +36,7 @@
 		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			mui.init();
-			var verison = document.getElementById("uaVersion");
-			var cache=document.getElementById("uaCache");
-			var clearcache=document.getElementById("uaCacheLi");
-			var downDict;
-			mui.plusReady(function() {
-				plus.runtime.getProperty(plus.runtime.appid, function(inf) {
-					var currentVersionss = inf.version; //获取当前版本号
-					verison.innerHTML = currentVersionss;
-				});
-				plus.io.requestFileSystem(plus.io.PUBLIC_DOWNLOADS, function(fs) {
-					downDict = fs.root;
-					downDict.getMetadata(function(metadata){
-						cache.innerHTML = parseInt(metadata.size/(1024*1024)) + 'M';
-					},function(e){},true);
-				}, function(e) {
-					alert("Request file system failed: " + e.message);
-				});
-				clearcache.addEventListener('tap',function(){
-					var bts=["取消","清除"];
-					plus.nativeUI.confirm("清除缓存数据？",function(e){
-						if(e.index == 1){
-							//执行删除操作
-							downDict.removeRecursively(function(suc){
-								cache.innerHTML = "0M";
-								mui.toast('清除成功!');
-							}, function(err){
-								mui.toast('没有缓存数据');
-							});
-						}
-					},"提示信息",bts);
-				})
-				webtool.backQuit();
-			})
-		</script>
+		<script src="js/ucenter-about.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
