@@ -13,11 +13,11 @@ var album={
 	 */
 	getAlbumList:function(postInfo,callback){
 		var page=postInfo.page || 1;
-		var typeId=postInfo.typeId || 0;
+		var type=postInfo.type || 0;
 		var ajax=new ajaxRequest();
 		ajax.addData('page',page);
 		//后台默认0获取全部数据
-		ajax.request('issue_list/'+typeId,'GET',function(res){
+		ajax.request('issue_list/'+type,'GET',function(res){
 			callback(res);
 		})
 	}

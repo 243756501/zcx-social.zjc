@@ -758,7 +758,12 @@
 					"config.js",
 					"css/pull-top-tips.css",
 					"css/appstyle/base.css",
-					"js/tool/app.js"
+					"js/tool/app.js",
+					"img/weibo_df.png",
+					"js/tool/imgload.js",
+					"js/tool/net_tools.js",
+					"js/tool/md5.min.js",
+					"album/js/album.js"
 				],
 				"refer": [],
 				"priority": 0
