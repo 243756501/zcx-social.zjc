@@ -155,6 +155,15 @@ var apptools = {
 //页面辅助方法
 var webtool = {
 	/*
+	 * 返回关闭页面，用于一些不常用的页面，避免预载页面过多消耗性能
+	 */
+	backQuit:function(){
+		mui.back=function(){
+			var wb=plus.webview.currentWebview();
+			wb.close();
+		}
+	},
+	/*
 	 * 对mui.openwindow的二次封装，压缩页面代码
 	 */
 	openSimView: function(webview, extData, anima, delayTime) {

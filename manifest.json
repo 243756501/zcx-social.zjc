@@ -767,6 +767,18 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"ucenter/view/ucenter-about.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/appstyle/base.css",
+					"img/app-logo.png",
+					"js/tool/apptools.js"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {

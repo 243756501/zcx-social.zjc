@@ -24,7 +24,6 @@ mui.plusReady(function(){
 		deceleration: 0.0005
 	});
 	window.addEventListener('newsId',function(e){
-		console.log('123')
 		var newsId=e.detail.id;
 		var postInfo={
 			'id':newsId
