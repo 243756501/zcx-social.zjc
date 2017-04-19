@@ -561,7 +561,21 @@
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"css/appstyle/base.css"
+			"css/appstyle/base.css",
+			"js/lib/template.js",
+			"js/tool/mui.pullToRefresh.js",
+			"js/tool/imgload.js",
+			"js/tool/httptool.js",
+			"css/pull-top-tips.css",
+			"config.js",
+			"js/tool/net_tools.js",
+			"js/tool/apptools.js",
+			"js/tool/mui.pullToRefresh.material.js",
+			"js/tool/md5.min.js",
+			"js/tool/app.js",
+			"ucenter/js/ucenter.js",
+			"ucenter/view/js/ucenter-fans.js",
+			"ucenter/css/ucenter-fans.css"
 		]
 	}
 }

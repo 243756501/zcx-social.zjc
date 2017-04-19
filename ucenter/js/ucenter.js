@@ -19,7 +19,10 @@ var ucenter={
 			uid=data.data_1.uid;
 		})
 		var type=postInfo.type;
+		var page=postInfo.page;
 		var ajax=new ajaxRequest();
+		ajax.addData('type',type);
+		ajax.addData('page',page);
 		ajax.request('friends/'+uid,'GET',function(res){
 			callback(res);
 		})
