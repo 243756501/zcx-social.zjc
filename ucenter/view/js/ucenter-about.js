@@ -3,6 +3,29 @@ var verison = document.getElementById("uaVersion");
 var cache = document.getElementById("uaCache");
 var clearcache = document.getElementById("uaCacheLi");
 var downDict;
+//
+document.getElementById("QQLi").addEventListener('tap', function() {
+	console.log(plus.os.name);
+	if(mui.os.ios) {
+		// 导入UIWebview、NSURLRequest、NSURL类
+		var Webview = plus.ios.importClass("UIWebview");
+		var NSURLRequest = plus.ios.import('NSURLRequest');
+		var NSURL = plus.ios.import('NSURL');
+		// 获取当前Webview对象的实例
+		var wv = plus.ios.currentWebview();
+		// 创建请求对象
+		var req = NSURLRequest.requestWithURL(NSURL.URLWithString('mqq://im/chat?chat_type=wpa&uin=243756501&version=1&src_type=web'));
+		// 跳转页面
+		plus.ios.invoke(wv, "loadRequest:", req);
+	} else {
+		var Intent = plus.android.importClass("android.content.Intent");
+		var Uri = plus.android.importClass("android.net.Uri");
+		var url = Uri.parse('mqqwpa://im/chat?chat_type=wpa&uin=243756501&site=qq&menu=yes');
+		var intent = new Intent(Intent.ACTION_VIEW, url);
+		var main = plus.android.runtimeMainActivity();
+		main.startActivity(intent);
+	}
+})
 mui.plusReady(function() {
 	plus.runtime.getProperty(plus.runtime.appid, function(inf) {
 		var currentVersionss = inf.version; //获取当前版本号

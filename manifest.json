@@ -491,7 +491,10 @@
 					"config.js",
 					"ucenter/img/ucenter-background.jpg",
 					"ucenter/css/ucenter-userinfo.css",
-					"ucenter/view/js/ucenter-userinfo.js"
+					"ucenter/view/js/ucenter-userinfo.js",
+					"js/tool/imgload.js",
+					"js/tool/net_tools.js",
+					"js/tool/md5.min.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -776,7 +779,9 @@
 					"css/mui.min.css",
 					"css/appstyle/base.css",
 					"img/app-logo.png",
-					"js/tool/apptools.js"
+					"js/tool/apptools.js",
+					"ucenter/view/js/ucenter-about.js",
+					"ucenter/css/ucenter-about.css"
 				],
 				"refer": [],
 				"priority": 0

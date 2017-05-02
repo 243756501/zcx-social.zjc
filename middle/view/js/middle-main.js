@@ -10,7 +10,7 @@ var listitemShow = function() {
 			clearInterval(timecount);
 			i = 0;
 		}
-	}, 200)
+	}, 100)
 }
 var listitemHide = function() {
 	mui('.mui-table-view-cell').each(function(index, item) {
