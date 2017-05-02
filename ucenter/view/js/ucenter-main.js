@@ -55,7 +55,7 @@ mui.plusReady(function() {
 			tool.addUserInfo(userInfo);
 			document.getElementById("switchBtn").addEventListener('tap', function() {
 				webtool.openPreView('../../account/view/account-login', function(wb) {
-					wb.show('slide-in-right');
+					wb.show('pop-in',100);
 				})
 			});
 		});

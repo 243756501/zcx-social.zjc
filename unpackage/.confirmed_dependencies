@@ -582,5 +582,27 @@
 			"ucenter/view/js/ucenter-fans.js",
 			"ucenter/css/ucenter-fans.css"
 		]
+	},
+	"ucenter/view/ucenter-rank.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"ucenter/view/ucenter-score.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"ucenter/js/ucenter.js",
+			"js/lib/template.js",
+			"js/tool/apptools.js",
+			"js/tool/httptool.js",
+			"config.js",
+			"js/tool/app.js",
+			"ucenter/css/ucenter-score.css",
+			"ucenter/view/js/ucenter-score.js"
+		]
 	}
 }

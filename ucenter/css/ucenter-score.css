@@ -1,0 +1,10 @@
+.score-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.score-contianer {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+}
