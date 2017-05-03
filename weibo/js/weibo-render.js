@@ -138,10 +138,10 @@ repost_view = '<a href="javascript:">' +
 	'</div></a>';
 
 weibo_comment = '<img id="{{user.uid}}" class="user-flag avatar mui-pull-left" data-uid="{{user.uid}}" onload="load(this)" src="../../img/default_avatar.jpg" data-src="{{user.avatar128}}">' +
-	'<div class="mui-media-body"><img src="../img/weibo-item-like.png" class="base-own-icon reply-btn"></i>' +
-	'<p><span class="user-flag" data-uid="{{user.uid}}">{{user.nickname}}</span></p>' +
-	'<div class="txt-xxs"><span class="time">{{create_time}}</span></div>' +
-	'<p class="weibo-comment">{{content}}</p></div>';
+	'<div class="media-body mui-media-body">' +
+	'<div class="del-userInfo-container">' +
+	'<div class="txt-xxs"><p><span class="user-flag" data-uid="{{user.uid}}">{{user.nickname}}</span></p><span class="time">{{create_time}}</span><p>{{content}}</p></div></div>' +
+	'</div><img src="../img/weibo-item-like.png" class="base-own-icon reply-btn mui-pull-right">';
 
 weibo_support_list = '<img id="{{uid}}" class="user-flag mui-pull-left" data-uid="{{uid}}" onload="load(this)" src="../../img/default_avatar.jpg" data-src="{{avatar128}}">' +
 	'<div class="mui-media-body" style="font-size:12px;">{{nickname||"匿名"}}</div>';

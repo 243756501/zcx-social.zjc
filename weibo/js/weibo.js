@@ -22,9 +22,8 @@ var weibo={
 		var id=postInfo.id;
 		var page=postInfo.type || '1';
 		var ajax=new ajaxRequest();
-		ajax.addData('id',id);
 		ajax.addData('page',page);
-		ajax.request('weibo_comment','GET',function(data){
+		ajax.request('weibo_comment/'+id,'GET',function(data){
 			callback(data);
 		})
 	},
@@ -48,5 +47,22 @@ var weibo={
 		ajax.request('weibo','POST',function(data){
 			callback(data);
 		})
-	}
+	},
+	
+	/*
+	 * 微博评论
+	 */
+	sendWeiboComment:function(postInfo,callback){
+		var content=postInfo.content || "";
+		var weibo_id=postInfo.id;
+		var to_comment_id=postInfo.toId || "";
+		var open_id;
+		app.getUserInfo(function(res){
+			open_id=res.data.open_id;
+		})
+		var ajax=new ajaxRequest();
+		ajax.request('weibo_comment','POST',function(res){
+			callback(res);
+		})
+	},
 }

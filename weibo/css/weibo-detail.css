@@ -16,7 +16,7 @@
 
 .weibo-detail-body {
 	background: #FFFFFF;
-	padding: 10px;
+	padding: 5px;
 }
 
 .weibo-item-content-div {
@@ -59,8 +59,77 @@
 	flex-direction: column;
 	height: 50px;
 }
-#noComment
-{
+
+#noComment {
 	position: relative;
 	top: 15px;
+}
+
+.weibo-detail-body {
+	margin-bottom: 45px !important;
+}
+
+.bottom-margin {
+	margin-bottom: 0px !important;
+}
+
+.right-margin {
+	margin-right: 10px;
+}
+
+.weibo-comment {
+	padding-left: 55px;
+}
+
+.bottom-line {
+	padding-bottom: 2px;
+	/*border-bottom: 1px solid #F3F3F3;*/
+}
+
+.avatar {
+	margin-top: 5px;
+}
+
+.loadBar {
+	text-align: center;
+	padding-bottom: 10px !important;
+}
+
+.weibo-detail-foot {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+.weibo-detail-foot-box {
+	position: fixed;
+	width: 100%;
+	height: 40px;
+	min-height: 40px;
+	left: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	background-color: #fafafa;
+}
+.user-flag
+{
+	width: 40px;
+	border-radius: 50%;
+}
+.bottom-line
+{
+	display: flex;
+	align-items: center;
+}
+
+.media-body
+{
+	display: flex;
+	width: 100%;
+	margin-left: 20px;
+}
+.del-userInfo-container
+{
+	display: flex;
+	justify-content: space-between;
 }
