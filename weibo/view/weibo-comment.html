@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+		    <i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+		    <h1 class="mui-title">发布评论</h1>
+		    <button id="submitBtn" class="mui-pull-right mui-btn mui-btn-green">提交</button>
+		</header>
+		<div class="base-pagebody">
+		    <textarea id="commentArea" name="" rows="15" cols=""></textarea>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/weibo.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			var commentArea=document.getElementById("commentArea");
+			var submitBtn=document.getElementById("submitBtn");
+			var info={};
+			var postInfo={};
+			mui.plusReady(function(){
+				var weibopage=plus.webview.getWebviewById('weibo-detail');
+				window.addEventListener('send-comment',function(e){
+					info.id=e.detail.id;
+					info.type=e.detail.type;
+				});
+				submitBtn.addEventListener('tap',function(){
+					var content=commentArea.value;
+					if(content.length==0)
+					{
+						mui.toast('评论内容不能为空');
+						return;
+					}
+					postInfo.content=commentArea.value;
+					postInfo.id=info.id;
+					if(info.type=='weibo')
+					{
+						weibo.sendWeiboComment(postInfo,function(res){
+							if(res.data)
+							{
+								mui.toast('发布评论成功');
+								commentArea.value="";
+								weibopage.evalJS("insertComment('+res.data+')");
+								mui.back();
+							}
+							else
+							{
+								mui.toast('发布失败');
+							}
+						})
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

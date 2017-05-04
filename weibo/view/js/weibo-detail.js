@@ -10,6 +10,8 @@ var postInfo = {
 var weibodeBody = document.getElementById("weibo_scroll");
 var weiboComList, weiboContent, noComment, getCommentBtn;
 var loading = document.getElementById("loading_page");
+
+
 var addWeiboInfo = function(data, callback) {
 	var html = parse_weibo_html(data, 'weibo_detail_script');
 	weibodeBody.innerHTML = html;
@@ -39,6 +41,11 @@ var addWeiboComment = function(postInfo) {
 	})
 }
 
+var insertComment=function(data){
+	var li=getWeiboCommentLi(data);
+	alert('123');
+	weiboComList.insertBefore(li, weiboComList.childNodes[0]);
+}
 
 window.addEventListener('weiboInfo', function(e) {
 	var weiboInfo = e.detail.weiboInfo;
@@ -57,7 +64,13 @@ mui('.weibo-detail-tab').on('tap', '.weibo-item-other-item', function(e) {
 	switch(tapId)
 	{
 		case 'commentBtn':
-		
+		webtool.openPreView('../../weibo/view/weibo-comment',function(wb){
+			mui.fire(wb,'send-comment',{
+				'type':'weibo',
+				'id':postInfo.id
+			});
+			wb.show('pop-in');
+		})
 		break;
 	}
 

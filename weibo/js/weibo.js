@@ -61,6 +61,10 @@ var weibo={
 			open_id=res.data.open_id;
 		})
 		var ajax=new ajaxRequest();
+		ajax.addData('content',content);
+		ajax.addData('weibo_id',weibo_id);
+		ajax.addData('to_comment_id',to_comment_id);
+		ajax.addData('open_id',open_id);
 		ajax.request('weibo_comment','POST',function(res){
 			callback(res);
 		})
