@@ -43,7 +43,6 @@ var addWeiboComment = function(postInfo) {
 
 var insertComment=function(data){
 	var li=getWeiboCommentLi(data);
-	alert('123');
 	weiboComList.insertBefore(li, weiboComList.childNodes[0]);
 }
 

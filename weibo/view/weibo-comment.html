@@ -50,7 +50,8 @@
 							{
 								mui.toast('发布评论成功');
 								commentArea.value="";
-								weibopage.evalJS("insertComment('+res.data+')");
+								var dataInfo=JSON.stringify(res.data);
+								weibopage.evalJS("insertComment("+dataInfo+")");
 								mui.back();
 							}
 							else

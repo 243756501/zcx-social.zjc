@@ -633,7 +633,9 @@
 					"weibo/js/weibo-render.js",
 					"weibo/js/weibo.js"
 				],
-				"refer": [],
+				"refer": [
+					"weibo/view/weibo-comment.html"
+				],
 				"priority": 0
 			},
 			"weibo/view/weibo-send.html": {
@@ -834,6 +836,21 @@
 					"js/tool/app.js",
 					"ucenter/css/ucenter-score.css",
 					"ucenter/view/js/ucenter-score.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"weibo/view/weibo-comment.html": {
+				"resources": [
+					"weibo/js/weibo.js",
+					"js/tool/apptools.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/tool/httptool.js",
+					"config.js",
+					"css/appstyle/base.css",
+					"js/tool/app.js"
 				],
 				"refer": [],
 				"priority": 0
