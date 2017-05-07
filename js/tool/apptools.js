@@ -168,7 +168,7 @@ var webtool = {
 	 */
 	openSimView: function(webview, extData, anima, delayTime) {
 		extData = extData || '';
-		anima = anima || 'slide-in-right';
+		anima = anima || '';
 		delayTime = delayTime || '300';
 		mui.openWindow({
 			url: webUrl + '.html',

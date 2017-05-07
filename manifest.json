@@ -584,9 +584,15 @@
 					"config.js",
 					"img/df_big.png",
 					"mall/view/js/mall-goods-detail.js",
-					"mall/css/mall-goods-detail.css"
+					"mall/css/mall-goods-detail.css",
+					"css/animate/animate.min.css",
+					"js/tool/httptool.js",
+					"js/tool/app.js",
+					"mall/js/mall.js"
 				],
-				"refer": [],
+				"refer": [
+					"mall/view/mall-exch.html"
+				],
 				"priority": 0
 			},
 			"mall/view/mall-goods-list.html": {
@@ -850,6 +856,21 @@
 					"js/tool/httptool.js",
 					"config.js",
 					"css/appstyle/base.css",
+					"js/tool/app.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mall/view/mall-exch.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/appstyle/base.css",
+					"js/tool/apptools.js",
+					"js/tool/httptool.js",
+					"mall/js/mall.js",
+					"config.js",
 					"js/tool/app.js"
 				],
 				"refer": [],

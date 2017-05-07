@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
+		<style>
+			.hasScore {
+				color: #FF0000;
+			}
+			.alarm-info
+			{
+				color: #CF2D28;
+				width: 100% !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header">
+			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+			<h1 class="mui-title">积分兑换</h1>
+		</header>
+		<div id="mainBody" class="base-pagebody">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label class="alarm-info">请如实填写以下信息</label>
+				</div>
+				<div class="mui-input-row">
+					<label>收货人</label>
+					<input class="exch-item" type="text" placeholder="收件人名">
+				</div>
+				<div class="mui-input-row">
+					<label>收货地址</label>
+					<input class="exch-item" type="text" placeholder="详细地址">
+				</div>
+				<div class="mui-input-row">
+					<label>邮编</label>
+					<input class="exch-item" type="number" placeholder="邮编号码">
+				</div>
+				<div class="mui-input-row">
+					<label>联系方式</label>
+					<input class="exch-item" type="number" placeholder="手机号码">
+				</div>
+				<div class="mui-button-row">
+					<button id="submitBtn" type="button" class="mui-btn mui-btn-primary" onclick="return false;">确认</button>&nbsp;&nbsp;
+					<button id="cancelBtn" type="button" class="mui-btn mui-btn-danger" onclick="return false;">取消</button>
+				</div>
+			</form>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mall.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			var postInfo = {};
+			window.addEventListener('mall-exch', function(e) {
+				var dataInfo = e.detail.data;
+				postInfo.id = dataInfo.id;
+			});
+			document.getElementById("submitBtn").addEventListener('tap',function(){
+				postInfo.name=mui('.exch-item')[0].value;
+                postInfo.address=mui('.exch-item')[1].value;
+                postInfo.zipcode=mui('.exch-item')[2].value;            
+                postInfo.phone=mui('.exch-item')[3].value;
+                mall.exchangeGoods(postInfo,function(res){
+                	if(res.data)
+                	{              		
+                		mui.toast('兑换成功');
+                		mui.back();
+                	}
+                	else
+                	{
+                		mui.toast(res.info);
+                	}
+                })
+			});
+			document.getElementById("cancelBtn").addEventListener('tap',function(){
+				mui.each(document.querySelectorAll('.exch-item'),function(index,item){
+					item.value="";
+				})
+			});
+			webtool.backQuit();
+		</script>
+	</body>
+
+</html>

@@ -73,3 +73,11 @@
 		font-size: 14px;
 		margin-bottom: 2%;
 	}
+	.mall-myscore
+	{
+		display: flex;
+		align-items: center;
+		height: 100%;
+		font-size: 12px;
+	}
+	

@@ -8,13 +8,18 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css" />
-		<link rel="stylesheet" type="text/css" href="../css/mall-goods-detail.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/mall-goods-detail.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.min.css" />
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav base-title-header">
 			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
 			<h1 class="mui-title">商品详情</h1>
+			<div id="scoreContainer" class="mall-myscore mui-pull-right" style="display: none;">				
+				<span>我的积分</span>
+				<span id="myscore"></span>
+			</div>
 		</header>
 		<div id="loading_page" class="base-loading">
 			<i class="mui-spinner"></i>
@@ -24,11 +29,11 @@
 		</div>
 		<script id="goods_detail_script" type="text/html">
 			<div class="mall-goods-detail-img-div">
-				<img class="mall-goods-detail-img" src="../../img/weibo_df.png" data-src="{{goods_icon}}"  onload="load(this)"/>
+				<img class="mall-goods-detail-img" src="../../img/weibo_df.png" data-src="{{goods_icon}}" onload="load(this)" />
 			</div>
 			<div class="mall-goodsInfo-price-body">
 				<span>单价：</span>
-				<span class="mall-goods-price">{{money_need}}</span>
+				<span id="costScore" class="mall-goods-price">{{money_need}}</span>
 				<span>库存</span>
 				<span>{{goods_num}}</span>
 				<span>件</span>
@@ -52,17 +57,17 @@
 			</div>
 			<nav class="mall-goods-nav mui-bar mui-bar-tab">
 				<div class="goods-all-cost-body">
-					<span>所需积分:</span>
-					<span class="mall-goods-cost-all">233</span>
 				</div>
-				<button class="goods-buy-btn mui-btn mui-btn-danger">立即兑换</button>
+				<button id="exchBtn" class="goods-buy-btn mui-btn mui-btn-danger">立即兑换</button>
 			</nav>
 		</script>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/imgtools.js"></script>
+		<script src="../js/mall.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/mall-goods-detail.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
