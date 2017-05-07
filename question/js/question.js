@@ -31,5 +31,15 @@ var question={
 		ajax.request('question','POST',function(res){
 			callback(res);
 		})
+	},
+	/*
+	 * 获取问答详情
+	 */
+	getQuestionDtl:function(postInfo,callback){
+		var ajax=new ajaxRequest();
+		ajax.addData('id',postInfo.id);
+		ajax.request('question_detail','GET',function(res){
+			callback(res);
+		})
 	}
 }

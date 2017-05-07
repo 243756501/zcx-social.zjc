@@ -88,7 +88,8 @@
 			"img/default_avatar.jpg"
 		],
 		"refer": [
-			"question/view/question-send.html"
+			"question/view/question-send.html",
+			"question/view/question-detail.html"
 		]
 	},
 	"news/view/news-main.html": {
@@ -639,6 +640,24 @@
 			"mall/js/mall.js",
 			"config.js",
 			"js/tool/app.js"
+		]
+	},
+	"question/view/question-detail.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/appstyle/base.css",
+			"img/default_avatar.jpg",
+			"fonts/mui.ttf",
+			"weibo/img/weibo-item-like.png",
+			"js/tool/apptools.js",
+			"js/tool/httptool.js",
+			"question/js/question.js",
+			"config.js",
+			"js/tool/app.js",
+			"js/tool/mui.pullToRefresh.material.js",
+			"js/tool/mui.pullToRefresh.js",
+			"css/pull-top-tips.css"
 		]
 	}
 }

@@ -56,6 +56,15 @@
 			wb.show();
 		})
 	})
+	mui('#slider_group').on('tap','li',function(){
+		var dataInfo=this.detail_info;
+		webtool.openPreView('../../question/view/question-detail',function(wb){
+			 mui.fire(wb,'question-info',{
+			 	'data':dataInfo
+			 })
+			 wb.show('pop-in');
+		})
+	})
 	mui.plusReady(function() {		
 		mui('.mui-slider')[0].addEventListener('slide', function() {
 			var index = event.detail.slideNumber;
