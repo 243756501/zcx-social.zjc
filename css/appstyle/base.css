@@ -11,6 +11,15 @@
 	color: #F0AD4E !important;
 }
 
+/*
+ * 标题栏内容居中
+ */
+.base-title-center
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 
 /*
  * 文字按钮

@@ -1,0 +1,71 @@
+.user-avatar {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: 5%;
+}
+
+.answer-title {
+	display: flex;
+	justify-content: space-between;
+	background-color: #FFFFFF;
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	margin-top: 1%;
+	padding: 2%;
+}
+
+.askuser-container {
+	display: flex;
+	width: 100%;
+}
+
+.ask-avatar {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.ask-info {
+	margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.mui-table-view-cell {
+	display: flex;
+}
+
+.answer-avatar {
+	width: 15%;
+	margin-right: 5%;
+}
+
+.answer-otherinfo {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.support-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.usernickname {
+	font-size: 12px;
+}
+
+.no-comment {
+	display: flex;
+	justify-content: center;
+}
+
+#replyBtn {
+	font-size: 14px;
+}

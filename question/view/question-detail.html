@@ -7,99 +7,42 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css"/>
-		<style>
-			.user-avatar {
-				width: 20%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				margin-right: 5%;
-			}
-			
-			.answer-title {
-				display: flex;
-				justify-content: space-between;
-				background-color: #FFFFFF;
-				border-top: 1px solid #EEEEEE;
-				border-bottom: 1px solid #EEEEEE;
-				margin-top: 1%;
-				padding: 2%;
-			}
-			
-			.askuser-container {
-				display: flex;
-				width: 100%;
-			}
-			
-			.ask-avatar {
-				width: 100%;
-				border-radius: 50%;
-			}
-			
-			.ask-info {
-				margin-left: 5%;
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-				width: 100%;
-			}
-			
-			.mui-table-view-cell {
-				display: flex;
-			}
-			
-			.answer-avatar {
-				width: 15%;
-				margin-right: 5%;
-			}
-			
-			.answer-otherinfo {
-				display: flex;
-				width: 100%;
-				flex-direction: column;
-			}
-			
-			.support-container {
-				width: 100%;
-				display: flex;
-				align-items: center;
-				flex-direction: row-reverse;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/pull-top-tips.css" />
+		<link rel="stylesheet" type="text/css" href="../css/question-detail.css"/>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav base-title-header">
+		<header class="mui-bar mui-bar-nav base-title-header base-title-center">
 			<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
 			<h1 class="mui-title">问题详情</h1>
+			<span id="replyBtn" class="mui-pull-right">我来回答</span>
 		</header>
-		<div id="mainBody" class="base-pagebody">
+		<div class="mui-scroll-wrapper base-pagebody">
+			<div id="mainBody" class="mui-scroll">
+			</div>
+		</div>
+		<script id="question_ask_script" type="text/html">
 			<div class="askuser-container base-white-background  base-padding">
 				<div class="user-avatar">
 					<img src="../../img/default_avatar.jpg" class="ask-avatar" />
-					<span>{{user.nickname}}</span>
 				</div>
 				<div class="ask-info">
 					<span>{{title}}</span>
+					<span class="usernickname">{{user.nickname}}</span>
 					<span class="base-grey-font">{{update_time}}</span>
-					<div>{{description}}</div>
 				</div>
 			</div>
+			<div class="base-white-background base-padding">{{description}}</div>
 			<div class="answer-title">
 				<span>答案</span>
 				<span id="answer_num">回答数<span>{{answer_num}}</span></span>
 			</div>
 			<ul id="answer_ul" class="mui-table-view">
 			</ul>
-		</div>
-		<script id="question_ask_script" type="text/html">
-			
 		</script>
 		<script id="question_answer_script" type="text/html">
 			<div class="answer-avatar">
-				<img src="../../img/default_avatar.jpg" class="ask-avatar base-avatar-small" />
+				<img src="../../img/default_avatar.jpg" class="ask-avatar base-avatar-small" data-src="{{user.avatar128}}" onload="load(this)" />
 			</div>
 			<div class="answer-otherinfo">
 				<span>{{user.nickname}}</span>
@@ -115,24 +58,12 @@
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/imgload.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/tool/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/question.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			mui.init();
-			var postInfo = {};
-			var addQuesData=function(){
-				
-			};
-			window.addEventListener('question-info', function(e) {
-				var questionData = e.detail.data;
-				var id = questionData.id;
-				postInfo.id = id;
-				question.getQuestionDtl(postInfo, function(res) {
-                    
-				});
-			})
-		</script>
+		<script src="js/question-detail.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/appstyle/base.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav base-title-header base-title-center">
+		    <i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+		    <h1 class="mui-title">我的回答</h1>
+		    <span id="confirmBtn" class="confirm-btn text-btn base-head-btn">确定</span>
+		</header>
+		<div class="base-pagebody mui-fullscreen base-padding">
+			<textarea id="answerTxt" name="" rows="10" cols="" style="margin-top: 5%;"></textarea>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/tool/apptools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tool/httptool.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/question.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			var postInfo={};
+			var confirmBtn=document.getElementById("confirmBtn");
+			var answerTxt=document.getElementById("answerTxt");
+			confirmBtn.addEventListener('tap',function(){
+				postInfo.content=answerTxt.value;
+				question.answerQuestion(postInfo,function(res){
+					alert(JSON.stringify(res.data));
+					if(res.data)
+					{
+						mui.toast('回答成功!');
+					}
+					else
+					{
+						
+						mui.toast('回答失败!');
+					}
+				});
+			});
+			window.addEventListener('question-answer',function(e){
+				postInfo.question_id=e.detail.id;
+			})
+		</script>
+	</body>
+
+</html>
